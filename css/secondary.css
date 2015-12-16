@@ -382,20 +382,20 @@ p {
 .copy p + h2 {
   margin-top: 1.5em;
 }
-.copy p.tip {
-  padding: 12px 24px 12px 30px;
-  margin: 2em 0;
-  border-left: 4px solid #f66;
+.copy .tip {
   background-color: #f8f8f8;
-  position: relative;
   border-bottom-right-radius: 2px;
+  border-left: 4px solid #ef2d5e;
   border-top-right-radius: 2px;
+  margin: 2em 0;
+  padding: 1.5em 2em;
+  position: relative;
 }
-.copy p.tip:before {
+.copy .tip:before {
   position: absolute;
   top: 14px;
   left: -12px;
-  background-color: #f66;
+  background-color: #ef2d5e;
   color: #fff;
   content: "!";
   width: 20px;
@@ -405,6 +405,12 @@ p {
   line-height: 20px;
   font-weight: bold;
   font-size: 14px;
+}
+.copy .tip p:first-child {
+  margin-top: 0;
+}
+.copy .tip p:last-child {
+  margin-bottom: 0;
 }
 .copy ul {
   list-style: disc;
