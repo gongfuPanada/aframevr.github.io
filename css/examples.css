@@ -406,6 +406,23 @@ p {
   font-weight: bold;
   font-size: 14px;
 }
+.copy .tip.tip--dark {
+  background-color: rgba(0,0,0,0.5);
+  border-left-color: rgba(239,45,94,0.5);
+}
+.copy .tip.tip--dark:before {
+  background-color: #ef2d5e;
+  border: 2px solid #000;
+  color: #fff;
+  left: -14px;
+}
+.copy .tip.tip--thin {
+  font-size: 0.9rem;
+  padding: 1rem 2rem;
+}
+.copy .tip.tip--thin:before {
+  top: 0.75rem;
+}
 .copy .tip p:first-child {
   margin-top: 0;
 }
@@ -657,7 +674,7 @@ h3 + .examples-subnav {
 }
 .content--index .slogan {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.05rem;
@@ -667,6 +684,10 @@ h3 + .examples-subnav {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.4;
+  width: 350px;
+}
+.content--index .disclaimer {
+  color: rgba(255,255,255,0.5);
 }
 .menu {
   margin-bottom: 60px;
