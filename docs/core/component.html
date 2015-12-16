@@ -397,7 +397,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 </tr>
 <tr>
 <td>schema</td>
-<td>Defines component data schema (e.g., possible attributes, default values, possible values, types).</td>
+<td>Defines component data schema (e.g., possible properties, default values, possible values, types).</td>
 </tr>
 </tbody>
 </table>
@@ -437,7 +437,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 </tr>
 </tbody>
 </table>
-<h2 id="Component_Schema"><a href="#Component_Schema" class="headerlink" title="Component Schema"></a>Component Schema</h2><p>Components define a schema object that specifies default values and type coercion/validation. Each key in the schema object refers to the name of a component attribute. The values of the schema object are objects that can specify several keys.</p>
+<h2 id="Component_Schema"><a href="#Component_Schema" class="headerlink" title="Component Schema"></a>Component Schema</h2><p>Components define a schema object that specifies default values and type coercion/validation. Each key in the schema object refers to the name of a component property. The values of the schema object are objects that can specify several keys.</p>
 <table>
 <thead>
 <tr>
@@ -448,11 +448,11 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <tbody>
 <tr>
 <td>default</td>
-<td>Default value. If no value is specified, this default value is set in the component <code>data</code> for its attribute. The default value is also used as a reference for type coercion.</td>
+<td>Default value. If no value is specified, this default value is set in the component <code>data</code> for its property. The default value is also used as a reference for type coercion.</td>
 </tr>
 <tr>
 <td>oneOf</td>
-<td>An array that describes possible values for its attribute. If a value is set that is not in this array, a warning is thrown.</td>
+<td>An array that describes possible values for its property. If a value is set that is not in this array, a warning is thrown.</td>
 </tr>
 </tbody>
 </table>

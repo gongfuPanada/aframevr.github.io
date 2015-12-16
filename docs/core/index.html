@@ -313,21 +313,21 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <p>A-Frame is based on an <strong><a href="https://en.wikipedia.org/wiki/Entity_component_system" target="_blank" rel="external">entity-component system</a></strong>, a pattern common in game development that emphasizes composability:</p>
 <ul>
 <li>An <strong>entity</strong> is a general-purpose object in the scene (e.g., player, enemy, tree, sky).</li>
-<li>A <strong>component</strong> consists of attributes that modifies the behavior or functionality of an entity.</li>
+<li>A <strong>component</strong> consists of properties that modifies the behavior or functionality of an entity.</li>
 </ul>
 <p>An entity can have multiple components, and an entity’s behavior can be changed at runtime by adding, removing, or modifying components. As we will see below, this will provide great flexibility over traditional inheritance patterns.</p>
 <h2 id="Analogy"><a href="#Analogy" class="headerlink" title="Analogy"></a>Analogy</h2><p>As an abstract example, imagine a car is an entity:</p>
 <ul>
 <li>We can add a <code>color</code> component which affects the color of the car.</li>
-<li>We can add an <code>engine</code> component which has attributes such as “horsepower” or “weight” which affect the speed of the car.</li>
-<li>We might add a <code>tire</code> component which has attributes such as “grip” which affects the traction of the car.</li>
+<li>We can add an <code>engine</code> component which has properties such as “horsepower” or “weight” which affect the speed of the car.</li>
+<li>We might add a <code>tire</code> component which has properties such as “grip” which affects the traction of the car.</li>
 </ul>
 <p>These components would be able to be mixed and matched and even be used with with other vehicles such as airplanes, motorcycles, or boats (where we wouldn’t specify a <code>tire</code> component).</p>
 <h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>In A-Frame:</p>
 <ul>
 <li>Entities are HTML elements (i.e., <code>&lt;a-entity&gt;</code>).</li>
 <li>Components are HTML attributes that are set on the entity.</li>
-<li>Component attributes are defined by using a CSS-like syntax.</li>
+<li>Component properties are defined by using a CSS-like syntax.</li>
 </ul>
 <p>For example, to create a pink cube, which requires the <code>geometry</code> and <code>material</code> components:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">geometry</span>=<span class="value">"primitive: cube; depth: 1; height: 1; width: 1"</span></span><br><span class="line">          <span class="attribute">material</span>=<span class="value">"color: pink"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>

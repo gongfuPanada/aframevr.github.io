@@ -313,11 +313,11 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <p>The light component defines the entity as a source of light. Light affects all<br>materials that have not specified a flat shading model with <code>shader: flat</code>.<br>Note that lights are computationally expensive and the number of lights in a<br>scene should be limited.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">light</span>=<span class="value">"color: #AFA; intensity: 1.5"</span> <span class="attribute">position</span>=<span class="value">"-1 1 0"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>By default, A-Frame scenes inject default lighting, an ambient light and a<br>directional light. These default lights are visible in the DOM with the<br><code>data-aframe-default-light</code> attribute. However, whenever any lights are added,<br>the default lights are removed from the scene.</p>
-<p>We will go through the different types of lights and their respective<br>attributes one-by-one.</p>
+<p>We will go through the different types of lights and their respective<br>properties one-by-one.</p>
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 <th>Default Value</th>
 </tr>
@@ -335,7 +335,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 </tr>
 </tbody>
 </table>
-<h2 id="Ambient"><a href="#Ambient" class="headerlink" title="Ambient"></a>Ambient</h2><p>Ambient lights are applied to all entities in the scene globally. They are<br>defined only by the <code>color</code> attribute. And position, rotation, scale have no<br>effect on ambient lights.</p>
+<h2 id="Ambient"><a href="#Ambient" class="headerlink" title="Ambient"></a>Ambient</h2><p>Ambient lights are applied to all entities in the scene globally. They are<br>defined only by the <code>color</code> property. And position, rotation, scale have no<br>effect on ambient lights.</p>
 <p>It is recommended to have some form of ambient light such that shadowed areas<br>are not completely black and to mimic indirect lighting.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">light</span>=<span class="value">"type: ambient; color: #CCC"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Directional"><a href="#Directional" class="headerlink" title="Directional"></a>Directional</h2><p>Directional lights can be thought of as a light source infinitely far away, but<br>shining from a specific direction, like the sun. Thus, absolute position do not<br>have an effect on the intensity of the light on an entity. We can specify the<br>direction using the <code>position</code> component.</p>
@@ -345,7 +345,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 <th>Default Value</th>
 </tr>
@@ -363,7 +363,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 <th>Default Value</th>
 </tr>
@@ -386,7 +386,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 <th>Default Value</th>
 </tr>
@@ -414,7 +414,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 <th>Default Value</th>
 </tr>
