@@ -470,13 +470,18 @@ p {
   }
 }
 a {
-  border-bottom: 1px solid rgba(53,196,232,0.25);
+  border-bottom: 1px solid rgba(53,196,232,0.15);
   color: #1497b8;
   text-decoration: none;
 }
 a:hover {
-  border-bottom-color: rgba(53,196,232,0.75);
-  color: #35c5e9;
+  border-bottom-color: rgba(53,196,232,0.3);
+  color: #0d5e73;
+}
+a:active,
+a.click {
+  border-bottom-color: rgba(53,196,232,0.6);
+  color: rgba(53,196,232,0.9);
 }
 .nav {
   border-top: 1px dashed rgba(0,0,0,0.1);
