@@ -470,7 +470,7 @@ p {
   }
 }
 html[data-is-home="true"] {
-  min-width: 1200px;
+  min-width: 1000px;
 }
 body {
   color: #fff;
@@ -748,7 +748,7 @@ h3 + .examples-subnav {
   }
 }
 @media screen and (max-width: 800px) {
-  .mobile-get-started {
+  html:not([data-is-home="true"]) .mobile-get-started {
     display: inline-block;
     position: absolute;
     padding: 4px 5vw;
@@ -756,55 +756,55 @@ h3 + .examples-subnav {
     right: 20px;
     top: 20px;
   }
-  .main {
+  html:not([data-is-home="true"]) .main {
     flex-direction: column;
     justify-content: space-between;
   }
-  .example__iframe {
+  html:not([data-is-home="true"]) .example__iframe {
     height: 100%;
   }
-  .content--body {
+  html:not([data-is-home="true"]) .content--body {
     position: absolute;
     bottom: 0;
     left: 0;
     top: 0;
     right: 0;
   }
-  .sidebar,
-  .sidebar__wrap {
+  html:not([data-is-home="true"]) .sidebar,
+  html:not([data-is-home="true"]) .sidebar__wrap {
     height: 150px;
     overflow-x: hidden;
   }
-  .sidebar {
+  html:not([data-is-home="true"]) .sidebar {
     order: 1;
     padding: 0;
     position: relative;
     max-width: 100%;
     width: 100%;
   }
-  .sidebar .nav {
+  html:not([data-is-home="true"]) .sidebar .nav {
     border: 0;
     margin-bottom: 0;
     padding: 20px 0 0;
   }
-  .example-nav {
+  html:not([data-is-home="true"]) .example-nav {
     position: absolute;
     height: 80px;
     bottom: 0;
     left: 0;
     width: 100%;
   }
-  #logo {
+  html:not([data-is-home="true"]) #logo {
     display: block;
     height: 35px;
     pointer-events: none;
   }
-  .logo__wordmark {
+  html:not([data-is-home="true"]) .logo__wordmark {
     background-position: 0 50%;
     background-size: contain;
     width: 100%;
   }
-  .example-nav-link {
+  html:not([data-is-home="true"]) .example-nav-link {
     border: 0;
     height: 100%;
     font-size: 2rem;
@@ -815,16 +815,16 @@ h3 + .examples-subnav {
     position: absolute;
     bottom: 0;
   }
-  .example-nav-link span {
+  html:not([data-is-home="true"]) .example-nav-link span {
     display: none;
   }
-  .example-nav-prev {
+  html:not([data-is-home="true"]) .example-nav-prev {
     left: 0;
   }
-  .example-nav-next {
+  html:not([data-is-home="true"]) .example-nav-next {
     right: 0;
   }
-  .subnav-item.current {
+  html:not([data-is-home="true"]) .subnav-item.current {
     padding: 0.5rem 2rem;
     position: absolute;
     top: 75px;
@@ -834,18 +834,18 @@ h3 + .examples-subnav {
     text-align: center;
     width: 100%;
   }
-  .subnav-item.current .subnav-link {
+  html:not([data-is-home="true"]) .subnav-item.current .subnav-link {
     font-size: 1.4rem;
   }
-  .subnav-item:not(.current),
-  .page-title {
+  html:not([data-is-home="true"]) .subnav-item:not(.current),
+  html:not([data-is-home="true"]) .page-title {
     display: none;
   }
-  .examples-list {
+  html:not([data-is-home="true"]) .examples-list {
     border: 0;
     padding: 0;
   }
-  .example-nav {
+  html:not([data-is-home="true"]) .example-nav {
     margin-top: 0;
   }
 }
