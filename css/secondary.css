@@ -472,7 +472,9 @@ p {
 a {
   border-bottom: 1px solid rgba(53,196,232,0.15);
   color: #1497b8;
+  position: relative;
   text-decoration: none;
+  transition: 0.05s ease;
 }
 a:hover {
   border-bottom-color: rgba(53,196,232,0.3);
@@ -482,6 +484,11 @@ a:active,
 a.click {
   border-bottom-color: rgba(53,196,232,0.6);
   color: rgba(53,196,232,0.9);
+  top: 1px;
+  left: 0.5px;
+}
+.copy p a {
+  margin: 0 1px;
 }
 .nav {
   border-top: 1px dashed rgba(0,0,0,0.1);
@@ -493,7 +500,7 @@ a.click {
   color: rgba(0,0,0,0.35);
   display: block;
   padding: 0.25rem 0;
-  transition: 0.1s color ease-in;
+  transition: 0.05s color ease;
 }
 .nav-link:hover {
   color: rgba(0,0,0,0.75);
@@ -523,7 +530,7 @@ a.click {
   color: rgba(0,0,0,0.35);
   text-indent: -10px;
   padding-left: 10px;
-  transition: 0.1s color ease-in;
+  transition: 0.05s color ease;
   width: 100%;
 }
 .subnav-link:hover {
@@ -697,7 +704,7 @@ p [href*=github][href*="/blob/"]:only-child,
   background: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 2px;
-  transition: 0.2s ease-in;
+  transition: 0.05s ease;
   color: #666;
   display: inline-block;
   padding: 0.25rem 1rem;
@@ -710,18 +717,27 @@ p [href*=github][href*="/blob/"]:only-child:after,
   margin-left: 0.5em;
   opacity: 0.5;
   height: 14px;
-  transition: 0.2s opacity ease-in;
+  transition: 0.05s opacity ease;
   vertical-align: middle;
   width: 12px;
 }
 p [href*=github][href*="/blob/"]:only-child:hover,
-.github-file-link:hover {
+.github-file-link:hover,
+p [href*=github][href*="/blob/"]:only-child:active,
+.github-file-link:active {
   border-color: #bbb;
   color: #333;
 }
 p [href*=github][href*="/blob/"]:only-child:hover:after,
-.github-file-link:hover:after {
+.github-file-link:hover:after,
+p [href*=github][href*="/blob/"]:only-child:active:after,
+.github-file-link:active:after {
   opacity: 1;
+}
+p [href*=github][href*="/blob/"]:only-child:active,
+.github-file-link:active {
+  background: rgba(0,0,0,0.1);
+  opacity: 0.5;
 }
 .copy a.btn {
   background-color: #5392c0;
@@ -733,7 +749,7 @@ p [href*=github][href*="/blob/"]:only-child:hover:after,
   font-weight: 600;
   margin: 5px 0;
   padding: 12px 24px;
-  transition: all 0.15s ease;
+  transition: 0.15s ease;
 }
 .copy a.btn.btn-download {
   padding: 12px 14px;
@@ -744,7 +760,8 @@ p [href*=github][href*="/blob/"]:only-child:hover:after,
   transform: translate(0, 1px);
   transition: none;
 }
-.copy a.btn:active {
+.copy a.btn:active,
+.copy a.btn.click {
   background-color: #3c78a5;
   transform: translate(0, 2px);
 }
