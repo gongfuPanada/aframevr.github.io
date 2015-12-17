@@ -269,10 +269,12 @@ a.borderless-link {
 h1,
 h2,
 h3,
-h4,
-strong {
+h4 {
   font-weight: 600;
   color: #2c3e50;
+}
+strong {
+  font-weight: 600;
 }
 code,
 pre {
