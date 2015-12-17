@@ -637,13 +637,12 @@ a:hover {
   margin-top: 0.25rem;
 }
 .highlight {
-  overflow-x: auto;
   position: relative;
-  padding: 0;
   background-color: #f8f8f8;
   padding: 0.8em 0.8em 0.4em;
   line-height: 1.1em;
   border-radius: 2px;
+  overflow-x: auto;
 }
 .highlight table,
 .highlight tr,
@@ -661,10 +660,10 @@ a:hover {
   line-height: 1.5em;
   margin: 0;
 }
-.highlight.html .code:after,
-.highlight.js .code:after,
-.highlight.bash .code:after,
-.highlight.css .code:after {
+.highlight.html:after,
+.highlight.js:after,
+.highlight.bash:after,
+.highlight.css:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -676,16 +675,16 @@ a:hover {
   height: 15px;
   font-weight: 600;
 }
-.highlight.html .code:after {
+.highlight.html:after {
   content: 'HTML';
 }
-.highlight.js .code:after {
+.highlight.js:after {
   content: 'JS';
 }
-.highlight.bash .code:after {
+.highlight.bash:after {
   content: 'Shell';
 }
-.highlight.css .code:after {
+.highlight.css:after {
   content: 'CSS';
 }
 p [href*=github][href*="/blob/"]:only-child,
