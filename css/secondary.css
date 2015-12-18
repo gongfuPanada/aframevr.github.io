@@ -785,9 +785,7 @@ p [href*=github][href*="/blob/"]:only-child:active,
 .content--docs h5[id],
 .content--docs h6[id] {
   cursor: pointer;
-  margin-left: -1.5rem;
   position: relative;
-  text-indent: 1.5rem;
 }
 .content--docs h2[id]:before,
 .content--docs h3[id]:before,
@@ -798,7 +796,7 @@ p [href*=github][href*="/blob/"]:only-child:active,
   color: #ccc;
   content: "";
   height: 100%;
-  left: 0;
+  left: -1.5rem;
   position: absolute;
   text-indent: 0;
   width: 1.5rem;
@@ -894,6 +892,13 @@ p [href*=github][href*="/blob/"]:only-child:active,
   }
   .copy .footnote .github-file-link {
     margin-left: 0;
+  }
+  .content--docs h2[id]:before,
+  .content--docs h3[id]:before,
+  .content--docs h4[id]:before,
+  .content--docs h5[id]:before,
+  .content--docs h6[id]:before {
+    left: -1rem;
   }
   .section-title {
     position: relative;
