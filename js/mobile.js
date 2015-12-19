@@ -34,7 +34,7 @@ if (isMobile()) {
     }
   }
 
-
+  window.MOBILE = true;
   html.setAttribute('data-is-mobile', 'true');
 }
 
