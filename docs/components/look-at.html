@@ -321,13 +321,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--components copy">
+<div class="content content--structured content--components copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/components/" class="borderless-link">Components</a></p>
     <h1 class="page__title">Look-At</h1>
 
-    <p>The look-at component defines the behavior for an entity to dynamically face<br>towards another entity or position. The look-at component can take either a<br>static position or a query selector to another entity.</p>
+    <p>The <code>look-at</code> component defines the behavior for an entity to dynamically face towards another entity or position. The <code>look-at</code> component can take either a static position or a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector" target="_blank" rel="external">query selector</a> to another entity.</p>
 <p>Example applications might include having a monster stare at the player:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">id</span>=<span class="value">"monster"</span> <span class="attribute">geometry</span>=<span class="value">"primitive: box"</span> <span class="attribute">material</span>=<span class="value">"src: monster.png"</span></span><br><span class="line">          <span class="attribute">look-at</span>=<span class="value">"[camera]"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">id</span>=<span class="value">"player"</span> <span class="attribute">camera</span>&gt;</span>/<span class="tag">&lt;<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Or maybe having a dog look at a running squirrel:</p>
@@ -347,7 +347,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 </tr>
 <tr>
 <td>selector</td>
-<td>A query selector indicating another entity to track. If the other entity is moving then the look-at component will track the moving entity.</td>
+<td>A query selector indicating another entity to track. If the other entity is moving then the <code>look-at</code> component will track the moving entity.</td>
 </tr>
 </tbody>
 </table>

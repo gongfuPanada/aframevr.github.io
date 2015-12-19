@@ -351,18 +351,21 @@ p {
 .copy figure,
 .copy p,
 .copy ul,
-.copy ol {
+.copy ol,
+.copy table {
   margin: 15px 0;
 }
 .copy figure:last-child + .footer,
 .copy p:last-child + .footer,
 .copy ul:last-child + .footer,
-.copy ol:last-child + .footer {
+.copy ol:last-child + .footer,
+.copy table:last-child + .footer {
   margin-bottom: 0;
 }
 .copy p,
 .copy ul,
-.copy ol {
+.copy ol,
+.copy table {
   line-height: 1.6;
 }
 .copy ul,
@@ -381,7 +384,8 @@ p {
 .copy iframe {
   margin: 1em 0;
 }
-.copy p + h2 {
+.copy p + h2,
+.copy table + table {
   margin-top: 1.5em;
 }
 .copy .tip {

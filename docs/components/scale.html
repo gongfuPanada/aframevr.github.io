@@ -321,14 +321,14 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--components copy">
+<div class="content content--structured content--components copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/components/" class="borderless-link">Components</a></p>
     <h1 class="page__title">Scale</h1>
 
     <p>The scale component defines a shrinking or stretching transformation of an entity. It takes three scaling factors for the X, Y, and Z axes. All entities inherently have the scale component.</p>
-<p>The example below shrinks the entity in half along the X direction, maintains the same scale factor along the Y direction, and stretches the entity by two-fold along the Z direction:</p>
+<p>The example below shrinks the entity in half along the X direction, maintains the same scale factor along the Y direction, and stretches the entity by two-fold along the Z-direction:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">scale</span>=<span class="value">"0.5 1 2"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Note that the scaling factors cannot be <code>0</code> or else the matrix transformations in WebGL will break.</p>
 <table>

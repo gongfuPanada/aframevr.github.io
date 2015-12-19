@@ -351,18 +351,21 @@ p {
 .copy figure,
 .copy p,
 .copy ul,
-.copy ol {
+.copy ol,
+.copy table {
   margin: 15px 0;
 }
 .copy figure:last-child + .footer,
 .copy p:last-child + .footer,
 .copy ul:last-child + .footer,
-.copy ol:last-child + .footer {
+.copy ol:last-child + .footer,
+.copy table:last-child + .footer {
   margin-bottom: 0;
 }
 .copy p,
 .copy ul,
-.copy ol {
+.copy ol,
+.copy table {
   line-height: 1.6;
 }
 .copy ul,
@@ -381,7 +384,8 @@ p {
 .copy iframe {
   margin: 1em 0;
 }
-.copy p + h2 {
+.copy p + h2,
+.copy table + table {
   margin-top: 1.5em;
 }
 .copy .tip {
@@ -779,19 +783,19 @@ p [href*=github][href*="/blob/"]:only-child:active,
   font: normal 0.8rem Fira Mono, Andale Mono, Monaco, Courier, monospace;
   margin-left: 10px;
 }
-.content--docs h2[id],
-.content--docs h3[id],
-.content--docs h4[id],
-.content--docs h5[id],
-.content--docs h6[id] {
+.content--structured h2[id],
+.content--structured h3[id],
+.content--structured h4[id],
+.content--structured h5[id],
+.content--structured h6[id] {
   cursor: pointer;
   position: relative;
 }
-.content--docs h2[id]:before,
-.content--docs h3[id]:before,
-.content--docs h4[id]:before,
-.content--docs h5[id]:before,
-.content--docs h6[id]:before {
+.content--structured h2[id]:before,
+.content--structured h3[id]:before,
+.content--structured h4[id]:before,
+.content--structured h5[id]:before,
+.content--structured h6[id]:before {
   border-bottom: 1px solid #fff;
   color: #ccc;
   content: "";
@@ -801,23 +805,23 @@ p [href*=github][href*="/blob/"]:only-child:active,
   text-indent: 0;
   width: 1.5rem;
 }
-.content--docs h2[id]:target:before,
-.content--docs h3[id]:target:before,
-.content--docs h4[id]:target:before,
-.content--docs h5[id]:target:before,
-.content--docs h6[id]:target:before,
-.content--docs h2[id]:hover:before,
-.content--docs h3[id]:hover:before,
-.content--docs h4[id]:hover:before,
-.content--docs h5[id]:hover:before,
-.content--docs h6[id]:hover:before {
+.content--structured h2[id]:target:before,
+.content--structured h3[id]:target:before,
+.content--structured h4[id]:target:before,
+.content--structured h5[id]:target:before,
+.content--structured h6[id]:target:before,
+.content--structured h2[id]:hover:before,
+.content--structured h3[id]:hover:before,
+.content--structured h4[id]:hover:before,
+.content--structured h5[id]:hover:before,
+.content--structured h6[id]:hover:before {
   content: "#";
 }
-.content--docs h2[id]:hover:before,
-.content--docs h3[id]:hover:before,
-.content--docs h4[id]:hover:before,
-.content--docs h5[id]:hover:before,
-.content--docs h6[id]:hover:before {
+.content--structured h2[id]:hover:before,
+.content--structured h3[id]:hover:before,
+.content--structured h4[id]:hover:before,
+.content--structured h5[id]:hover:before,
+.content--structured h6[id]:hover:before {
   color: #aaa;
 }
 .sidebar-mobile {

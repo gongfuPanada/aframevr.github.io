@@ -321,14 +321,14 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--components copy">
+<div class="content content--structured content--components copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/components/" class="borderless-link">Components</a></p>
     <h1 class="page__title">Loader</h1>
 
-    <p>The loader component defines the appearance of the entity by loading in a 3D<br>model.</p>
-<p>Note that this component may be subject to change due to design decisions and<br>support landing for the GLTF format.</p>
+    <p>The <code>loader</code> component defines the appearance of the entity by loading in a 3D model.</p>
+<p>Note that this component may be subject to change due to design decisions and <a href="https://github.com/aframevr/aframe-core/issues/532" target="_blank" rel="external">support landing</a> for the <a href="https://www.khronos.org/gltf" target="_blank" rel="external">GLTF format</a>.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">loader</span>=<span class="value">"src: monster.dae; format: collada"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
@@ -340,7 +340,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <tbody>
 <tr>
 <td>format</td>
-<td>Format of the 3D model asset.</td>
+<td>Format of the 3D model asset (either <code>collada</code> or <code>obj</code>).</td>
 </tr>
 <tr>
 <td>src</td>

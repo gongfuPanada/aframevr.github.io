@@ -321,7 +321,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--core copy">
+<div class="content content--structured content--core copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/core/" class="borderless-link">Core</a></p>
@@ -339,7 +339,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <li>We can add an <code>engine</code> component which has properties such as “horsepower” or “weight” which affect the speed of the car.</li>
 <li>We might add a <code>tire</code> component which has properties such as “grip” which affects the traction of the car.</li>
 </ul>
-<p>These components would be able to be mixed and matched and even be used with with other vehicles such as airplanes, motorcycles, or boats (where we wouldn’t specify a <code>tire</code> component).</p>
+<p>These components would be able to be mixed and matched and even be used with other vehicles such as airplanes, motorcycles, or boats (where we wouldn’t specify a <code>tire</code> component).</p>
 <h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>In A-Frame:</p>
 <ul>
 <li>Entities are HTML elements (i.e., <code>&lt;a-entity&gt;</code>).</li>
@@ -350,7 +350,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">geometry</span>=<span class="value">"primitive: cube; depth: 1; height: 1; width: 1"</span></span><br><span class="line">          <span class="attribute">material</span>=<span class="value">"color: pink"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>For web developers, the syntax might seem new, or even odd, but the composability makes it powerful to be able to customize entities in the system. Perhaps we want our cube to give off light; we can simply add the <code>light</code> component:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">geometry</span>=<span class="value">"primitive: cube; depth: 1; height: 1; width: 1"</span></span><br><span class="line">          <span class="attribute">material</span>=<span class="value">"color: pink"</span></span><br><span class="line">          <span class="attribute">light</span>=<span class="value">"intensity: 2"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>Perhaps we want our cube to also emit a sound. We can add the <code>sound</code> component. And we want to move the cube a little, we can use the <code>position</code> component.</p>
+<p>Perhaps we want our cube to also emit a sound. We can add the <a href="sound.html"><code>sound</code> component</a>. And we want to move the cube a little, we can use the <a href="../components/position.html"><code>position</code> component</a>.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">geometry</span>=<span class="value">"primitive: cube; depth: 1; height: 1; width: 1"</span></span><br><span class="line">          <span class="attribute">material</span>=<span class="value">"color: pink"</span></span><br><span class="line">          <span class="attribute">light</span>=<span class="value">"intensity: 2"</span></span><br><span class="line">          <span class="attribute">position</span>=<span class="value">"-1 5 0"</span></span><br><span class="line">          <span class="attribute">sound</span>=<span class="value">"src: dangerzone.mp3; volume: 2"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>We see that components make it very easy to compose entities with mixtures of behavior and functionality and everyone can write their own components to modify entities however they desire. For example, someone might write a <code>vibrate</code> component that makes the entity vibrate regardless of which kind of entity it is. Although it might seem verbose, it provides a core foundation for abstraction.</p>
 

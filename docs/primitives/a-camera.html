@@ -321,13 +321,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--primitives copy">
+<div class="content content--structured content--primitives copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/primitives/" class="borderless-link">Primitives</a></p>
     <h1 class="page__title">&lt;a-camera&gt;</h1>
 
-    <p>The camera primitive makes it easy to customize the controls and viewing parameters of our scene. It wraps an entity that contains a camera component, and within that a second entity for the cursor, which has geometry and material components.</p>
+    <p>The camera primitive makes it easy to customize the controls and viewing parameters of our scene. It wraps an entity that contains a <a href="../components/"><code>camera</code> component</a>, and within that a second entity for the cursor, which has <a href="../components/geometry.html"><code>geometry</code></a> and <a href="../components/material.html"><code>material</code></a> components.</p>
 <table>
 <thead>
 <tr>
@@ -399,7 +399,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-cube</span>&gt;</span><span class="tag">&lt;/<span class="title">a-cube</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>But if we add a camera primitive and do not adjust its position…</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-camera</span>&gt;</span><span class="tag">&lt;/<span class="title">a-camera</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-cube</span>&gt;</span><span class="tag">&lt;/<span class="title">a-cube</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>…the cube seems to disappear, because both the cube and camera are positioned at <code>0 0 0</code>, and the camera is therefore <em>inside</em> the cube.</p>
+<p>… the cube seems to disappear, because both the cube and camera are positioned at <code>0 0 0</code>, and the camera is therefore <em>inside</em> the cube.</p>
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>A camera with all the defaults:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-camera</span>&gt;</span><span class="tag">&lt;/<span class="title">a-camera</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>A camera with the cursor hidden and positioned in the scene:</p>

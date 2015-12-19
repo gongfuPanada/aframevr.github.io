@@ -321,15 +321,15 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--components copy">
+<div class="content content--structured content--components copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/components/" class="borderless-link">Components</a></p>
     <h1 class="page__title">Sound</h1>
 
-    <p>The sound component defines the entity as a source of sound or audio. The sound<br>component is positional and is therefore affected by the position component.</p>
+    <p>The <code>sound</code> component defines the entity as a source of sound or audio. The <code>sound</code> component is positional and is therefore affected by the <a href="position.html"><code>position</code> component</a>.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">id</span>=<span class="value">"river"</span> <span class="attribute">geometry</span>=<span class="value">"primitive: plane"</span> <span class="attribute">material</span>=<span class="value">"color: blue"</span></span><br><span class="line">          <span class="attribute">position</span>=<span class="value">"-10 0 0"</span> <span class="attribute">sound</span>=<span class="value">"src: river.mp3; autoplay: true"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>The sound component can also listen to an event before playing as well. For<br>example, we might have a damage sound play every time a monster is clicked:</p>
+<p>The <code>sound</code> component can also listen to an event before playing as well. For example, we might have a damage sound play every time a monster is clicked:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">id</span>=<span class="value">"elmo"</span> <span class="attribute">geometry</span>=<span class="value">"primitive: box"</span> <span class="attribute">material</span>=<span class="value">"src: elmo.png"</span></span><br><span class="line">          <span class="attribute">sound</span>=<span class="value">"src: ticklelaugh.mp3; on: click"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">a-entity</span> <span class="attribute">cursor</span> <span class="attribute">position</span>=<span class="value">"0 0 -5"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-entity</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>

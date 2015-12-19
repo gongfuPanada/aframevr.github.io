@@ -321,7 +321,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 </aside>
 
-<div class="content content--docs content--guide copy">
+<div class="content content--structured content--guide copy">
   <div class="copy__wrap">
 
     <p class="page__section"><a href="/docs/guide/" class="borderless-link">Guide</a></p>
@@ -329,7 +329,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
     <p>A-Frame comes with convenient primitives for common use cases such as videos, models, images, and skies. Primitives include:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-cube</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-plane</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-sphere</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-sky</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>The full list of available primmitives is available in the <a href="../../docs/primitives/">Primitives documentation</a>.</p>
+<p>The full list of available primitives is available in the <a href="../../docs/primitives/">Primitives documentation</a>.</p>
 <p>Each primitive has unique attributes. We can specify the width, depth, and height of a cube, for example, or the source of a 3D model:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a-cube</span> <span class="attribute">width</span>=<span class="value">"4"</span> <span class="attribute">depth</span>=<span class="value">"2"</span> <span class="attribute">height</span>=<span class="value">"20"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-cube</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-model</span> <span class="attribute">src</span>=<span class="value">"tree.dae"</span> <span class="attribute">scale</span>=<span class="value">"1 1 1"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-model</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-cylinder</span> <span class="attribute">radius</span>=<span class="value">"5"</span> <span class="attribute">open-ended</span>=<span class="value">"true"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-cylinder</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">a-videosphere</span> <span class="attribute">src</span>=<span class="value">"sunset.mp4"</span> <span class="attribute">autoplay</span>=<span class="value">"true"</span>&gt;</span><span class="tag">&lt;/<span class="title">a-videosphere</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Under the hood, primitives are concise and convenient wrappers around A-Frame’s powerful underlying entity-component system. Components include geometry, materials, raycaster, controls, and more. </p>
