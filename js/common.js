@@ -1,9 +1,4 @@
-/* global annyang */
 (function () {
-
-  var strip = function (str) {
-    return (str || '').replace(/\s+/g, ' ').trim();
-  };
 
   /**
    * Wraps `querySelector` à la jQuery's `$`.
@@ -135,229 +130,46 @@
       var right = e.keyCode === 39;
       // var up = e.keyCode === 38;
       // var down = e.keyCode === 40;
+      if (!left && !right) { return; }
 
-      if (left) { navToExample('back'); }
-      if (right) { navToExample('forward'); }
-    });
-  }
+      navLinks = getNavLinks();
+      if (!navLinks) { return; }
 
-  function navToExample (dir) {
-    navLinks = getNavLinks();
-    if (!navLinks) { return; }
-
-    var currentLink = getCurrentNavLink();
-    if (!currentLink) {
-      window.location.href = 'examples/';
-      return;
-    }
-
-    var destIdx;
-    var clicked = false;
-
-    if (dir === 'back') {
-      destIdx = currentLink.closest('[data-idx]').getAttribute('data-previous-idx');
-      if ('examplePrev' in window) {
-        clickEl(examplePrev);
-        clicked = true;
-      }
-    }
-
-    if (dir === 'forward') {
-      destIdx = currentLink.closest('[data-idx]').getAttribute('data-next-idx');
-      if ('exampleNext' in window) {
-        clickEl(exampleNext);
-        clicked = true;
-      }
-    }
-
-    if (destIdx) {
-      currentLink.classList.remove('current');
-    }
-
-    var destLink = navLinks[destIdx];
-    if (destLink) {
-      clickEl(destLink);
-      if (!clicked) {
-        destLink.click();
-      }
-    }
-  }
-
-  function fetchJSON (url, cb) {
-    var xhr = new XMLHttpRequest();
-    xhr.onload = function () {
-      try {
-        cb(JSON.parse(xhr.responseText));
-      } catch (e) {
-        cb({});
-      }
-    };
-    xhr.open('get', url);
-    xhr.send();
-  }
-
-  var speechCmds = null;
-
-  if ('annyang' in window) {
-    var back = function () {
-      console.error('back');
-      console.log('\n');
-      navToExample('back');
-    };
-    var forward = function () {
-      console.error('forward');
-      console.log('\n');
-      navToExample('forward');
-    };
-
-    // Disclaimer: `back` and `forward` mean with respect to the order of the
-    // Examples list, not the actual history state of the order in which the
-    // user has viewed the examples.
-    speechCmds = {
-      'back': back,
-      'forward': forward
-    };
-  }
-
-  fetchJSON('/examples/index.json', function (data) {
-    if (!data) { return; }
-
-    initSpeech(data.examples);
-  });
-
-  function initSpeech (data) {
-    if (!annyang) { return; }
-
-    choices = (data || []).map(function (item) {
-      item.title = (item.title || item.slug || '').replace(/&/g, 'and');
-      return item;
-    });
-
-    addSpeechCmd(choices[0], 'first');
-    addSpeechCmd(choices[0], 'start');
-    addSpeechCmd(choices[0], 'beginning');
-    // addSpeechCmd(choices[choices.length - 1], 'last');
-    addSpeechCmd(choices[choices.length - 1], 'end');
-
-    addSpeechCmd(choices[0], 'the first');
-    addSpeechCmd(choices[0], 'the start');
-    addSpeechCmd(choices[0], 'the beginning');
-    // addSpeechCmd(choices[choices.length - 1], 'the last');
-    addSpeechCmd(choices[choices.length - 1], 'the end');
-
-    function addSpeechCmd (example, title) {
-      if (!title) { title = example.title; }
-
-      var cmdFunc = function () { loadExample(example); };
-
-      // TODO: Use `regexp` format.
-      speechCmds[title] = cmdFunc;
-      speechCmds['go ' + title] = cmdFunc;
-      speechCmds['go *x ' + title] = cmdFunc;
-      speechCmds['go *x ' + title + ' one'] = cmdFunc;
-
-      speechCmds['skip to ' + title] = cmdFunc;
-      speechCmds['skip to ' + title + ' one'] = cmdFunc;
-      speechCmds['skip to *x ' + title + ' one'] = cmdFunc;
-
-      speechCmds['play ' + title] = cmdFunc;
-      speechCmds['play ' + title + ' one'] = cmdFunc;
-      speechCmds['play *x ' + title + ' one'] = cmdFunc;
-
-      speechCmds['open ' + title] = cmdFunc;
-      speechCmds['open ' + title + ' one'] = cmdFunc;
-      speechCmds['open *x ' + title + ' one'] = cmdFunc;
-
-      speechCmds['load ' + title] = cmdFunc;
-      speechCmds['load ' + title + ' one'] = cmdFunc;
-      speechCmds['load *x ' + title + ' one'] = cmdFunc;
-
-      speechCmds['start ' + title] = cmdFunc;
-      speechCmds['start ' + title + ' one'] = cmdFunc;
-      speechCmds['start *x ' + title + ' one'] = cmdFunc;
-    }
-
-    choices.forEach(function (example) { addSpeechCmd(example); });
-
-    function loadExample (example) {
-      if (!example) { return; }
-      console.log('loading example: %s', example.title);
-      window.location.href = '/' + ['examples', example.section, example.slug, ''].join('/');
-    }
-
-    annyang.addCommands(speechCmds);
-
-    annyang.addCallback('resultNoMatch', function (userSaid, commandText, phrases) {
-      if (!userSaid) { return; }
-
-      userSaid = userSaid.map(strip);
-
-      if (userSaid.indexOf('back') !== -1 ||
-          userSaid.indexOf('previous') !== -1 ||
-          userSaid.indexOf('backward') !== -1 ||
-          userSaid.indexOf('backwards') !== -1 ||
-          userSaid.indexOf('reverse') !== -1) {
-        speechCmds.back();
+      var currentLink = getCurrentNavLink();
+      if (!currentLink) {
+        window.location.href = 'examples/';
         return;
       }
 
-      if (userSaid.indexOf('next') !== -1 ||
-          userSaid.indexOf('forward') !== -1 ||
-          userSaid.indexOf('forwards') !== -1 ||
-          userSaid.indexOf('skip') !== -1 ||
-          userSaid.indexOf('pass') !== -1) {
-        speechCmds.forward();
-        return;
+      var destIdx;
+      var clicked = false;
+      if (left) {
+        destIdx = currentLink.closest('[data-idx]').getAttribute('data-previous-idx');
+        if ('examplePrev' in window) {
+          clickEl(examplePrev);
+          clicked = true;
+        }
+      }
+      if (right) {
+        destIdx = currentLink.closest('[data-idx]').getAttribute('data-next-idx');
+        if ('exampleNext' in window) {
+          clickEl(exampleNext);
+          clicked = true;
+        }
       }
 
-      var i = 0;
-      var j = 0;
-      var phrase = '';
-      var words = [];
-      var word = '';
+      if (destIdx) {
+        currentLink.classList.remove('current');
+      }
 
-      for (i = 0; i < userSaid.length; i++) {
-        phrase = userSaid[i];
-
-        words = phrase.split(' ');
-
-        if (words.indexOf('backward') !== -1 ||
-            words.indexOf('backwards') !== -1) {
-          speechCmds.back();
-          return;
-        }
-        if (words.indexOf('forward') !== -1 ||
-            words.indexOf('forwards') !== -1) {
-          speechCmds.forward();
-          return;
-        }
-
-        if (words.indexOf('back') !== -1 ||
-            words.indexOf('previous') !== -1 ||
-            words.indexOf('last') !== -1) {
-          // Disclaimer: last could be confused with last item.
-          speechCmds.back();
-          return;
-        }
-        if (words.indexOf('next') !== -1) {
-          speechCmds.forward();
-          return;
+      var destLink = navLinks[destIdx];
+      if (destLink) {
+        clickEl(destLink);
+        if (!clicked) {
+          destLink.click();
         }
       }
     });
-
-    if (window.MOBILE) {
-      annyang.start();
-    } else {
-      var examplesSidebar = $('[data-page-type="examples"] .sidebar');
-      if (examplesSidebar) {
-        examplesSidebar.addEventListener('click', function (e) {
-          if (e.detail >= 3) {
-            annyang.start();
-          }
-        });
-      }
-    }
   }
 
   // DOCS.
