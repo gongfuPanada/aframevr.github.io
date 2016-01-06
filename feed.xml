@@ -14,7 +14,7 @@
       <title><![CDATA[Introducing A-Frame 0.1.0]]></title>
       <link>https://aframe.io/blog/2015/12/16/introducing-aframe/</link>
       <guid>https://aframe.io/blog/2015/12/16/introducing-aframe/</guid>
-      <pubDate>Wed, 16 Dec 2015 16:00:00 GMT</pubDate>
+      <pubDate>Wed, 16 Dec 2015 19:00:00 GMT</pubDate>
       <description>
       <![CDATA[<h3 id="Today_the_MozVR_team_releases_the_first_version_of_A-Frame_3A_an_open_source_framework_for_creating_WebVR_experiences_with_markup"><a href="#Today_the_MozVR_team_releases_the_first_version_of_A-Frame_3A_an_open_source_framework_for_creating_WebVR_experiences_with_markup" class="headerlink" title="Today the MozVR team releases the first version of A-Frame: an open source framework for creating WebVR experiences with markup."></a>Today the MozVR team releases the first version of A-Frame: an open source framework for creating WebVR experiences with markup.</h3><p>A-Frame makes it easy for web developers to create virtual reality experiences that work across desktop, iPhone (Android support coming soon), and the Oculus Rift.</p>
 <p>We created A-Frame to make it easier to create VR web experiences. WebVR has shipped in builds of Firefox and Chromium since the summer of 2014, but creating content for it has required knowing WebGL. The WebGL scene is unbelievably talented and has created many mind-blowing VR experiences in the last year, but they are a small subset of the full web dev community. There are millions of talented developers who do not know WebGL. What if each of them could create and share VR experiences on the open web?</p>]]>
