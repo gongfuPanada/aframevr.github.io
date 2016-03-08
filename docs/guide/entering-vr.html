@@ -36,7 +36,14 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="twitter:description" content="Building Blocks for the VR Web">
     <meta name="twitter:image" content="https://aframe.io/images/card.png">
 
-    <link rel="icon" href="/images/aframe-logo.png" type="image/x-icon">
+    <meta name="web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
+
+    <link rel="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/images/aframe-logo-152.png">
+
     <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml">
 
     <script src="/js/mobile.js" type="text/javascript"></script>
@@ -320,8 +327,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <li>Tap the “VR” icon button, and drop your phone in a Cardboard holder.</li>
 </ol>
 <h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
-<li>Requires a WebGL-compatible browser. The faster the phone the better. We recommend Google Cardboard V2-compatible headsets for best results. Tested with Mobile Safari and Firefox for iOS, and Firefox for Android, and Chrome on Android.</li>
-<li>Requires iOS 9.1 or greater. The faster the iPhone the better. Tested in Mobile Safari and Firefox for iOS. We recommend Google Cardboard V2-compatible headset for best results with iPhones.</li>
+<li>Requires a WebGL-compatible browser. The faster the phone the better. We recommend Google Cardboard V2-compatible headsets for best results. Tested with Mobile Safari and Firefox for iOS, and Firefox and Chrome on Android.</li>
+<li>iPhone requires iOS 9.1 or greater.</li>
 <li>iPhone 6+ users will want to disable the Safari Tab Bar when viewing VR content.  This can be done in <code>Settings &gt; Safari &gt; Show Tab Bar</code>.</li>
 </ul>
 <h2 id="For_Oculus_Rift"><a href="#For_Oculus_Rift" class="headerlink" title="For Oculus Rift"></a>For Oculus Rift</h2><ol>
