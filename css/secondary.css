@@ -866,6 +866,8 @@ p [href*=github][href*="/blob/"]:only-child:active,
     transition: 0.05s ease-in;
     text-transform: uppercase;
     padding: 8px 30px;
+    position: relative;
+    z-index: 1;
   }
   .mobile-nav-btn:hover,
   .mobile-nav-btn:active {
