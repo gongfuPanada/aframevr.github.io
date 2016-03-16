@@ -4,6 +4,16 @@
 var path = window.location.pathname;
 var pathWithSlash = forceTrailingSlash(path);
 
+var a = document.createElement('a');
+function parseUrl (url) {
+  a.href = url;
+  return a;
+}
+
+function stripTrailingSlash (url) {
+  return url.replace(/\/+$/, '');
+}
+
 function forceTrailingSlash (str) {
   if (str.substr(-1) !== '/') {
     str += '/';
@@ -13,6 +23,35 @@ function forceTrailingSlash (str) {
 
 var examplesSubnav = document.querySelector('#examplesSubnav');
 var examplesRoutes = {};
+
+function getUrlParameter (name) {
+  // Simple function because `URLSearchParams` isn't supported everywhere yet.
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+var examplesServerUrl = getUrlParameter('examples_server_url');
+
+if (window.location.protocol === 'http:') {
+  // We're likely running the dev server.
+  // We could also just check if `localStorage.debug` is set, but this is faster.
+  if (examplesServerUrl) {
+    try {
+      localStorage.examplesServerUrl = examplesServerUrl;
+    } catch (e) {}
+    // Remove the query string and reload the page.
+    window.location.href = window.location.href.split('?')[0] + window.location.hash;
+    return;
+  }
+}
+
+try {
+  examplesServerUrl = localStorage.examplesServerUrl;
+} catch (e) {
+  examplesServerUrl = null;
+}
 
 getJSON(settings.rootUrl + '/examples/index.json', function (err, examples) {
   if (err) {
@@ -36,7 +75,19 @@ function fetchExamples (examples) {
 
     var tempExamplesSubnav = document.createElement('ul');
 
+    if (examples.home) {
+      // For local development.
+      if (examplesServerUrl) {
+        examples.home.scene_url = examples.home.scene_url.replace('https://aframe.io/aframe', stripTrailingSlash(examplesServerUrl));
+      }
+    }
+
     examples.showcase.forEach(function (item, idx) {
+      // For local development.
+      if (examplesServerUrl) {
+        item.scene_url = item.scene_url.replace('https://aframe.io/aframe', stripTrailingSlash(examplesServerUrl));
+      }
+
       url = settings.rootUrl + '/examples/' + item.section + '/' + item.slug + '/';
 
       className = url === pathWithSlash ? ' current' : '';
@@ -170,8 +221,7 @@ function init () {
   });
 
   var showPage = singlePage(function (href) {
-
-    var hrefWithSlash = forceTrailingSlash(href);
+    var hrefWithSlash = forceTrailingSlash(parseUrl(href).pathname);
 
     var exampleIframe = document.querySelector('#exampleIframe');
     if (exampleIframe) {
