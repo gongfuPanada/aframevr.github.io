@@ -936,3 +936,6 @@ p [href*=github][href*="/blob/"]:only-child:active,
     padding-left: 35px;
   }
 }
+#__bs_notify__ {
+  display: none !important;
+}
