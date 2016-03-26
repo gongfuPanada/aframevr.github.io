@@ -2,6 +2,11 @@
 
 
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="" data-ga-id="UA-24056643-4">
   <head>
@@ -37,7 +42,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="twitter:description" content="Building Blocks for the VR Web">
     <meta name="twitter:image" content="https://aframe.io/images/card.png">
 
-    <meta name="web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="black">
     <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
 
@@ -91,9 +96,9 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
   <ul id="nav" class="nav">
     
-      <li class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Getting Started</span></a></li>
+      <li class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Guide</span></a></li>
     
-      <li class="nav-item"><a href="/docs/guide/installation.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
+      <li class="nav-item"><a href="/docs/guide/getting-started.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
     
       <li class="nav-item"><a href="/examples/" class="nav-link nav-link-docs"><span>Examples</span></a></li>
     
@@ -134,10 +139,10 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <p>In a more abstract sense, A-Frame is a JavaScript framework and not a web standard. It is built on top of WebGL which is widely supported on modern browsers for desktop and mobile devices. That means it works for developers and users <em>today</em>. This is in contrast to the old approach to implementing new functionality in the web platform; the proposal, ratification, and implementation of new web standards proved to be a multi-year process with no guarantee of a successful outcome.</p>
 <p>A-Frame embodies the <a href="https://extensiblewebmanifesto.org/" target="_blank" rel="external">Extensible Web</a> approach to evolving the web platform: “instead of taking years to draft and ship web standards that people might not even want, ship new ideas early and often as JavaScript libraries/frameworks built atop low-level enabling APIs (such as WebGL), let them battle it out in the market, and <em>then</em> look at standardization of the winners.”</p>
 <h2 id="How-can-I-get-started"><a href="#How-can-I-get-started" class="headerlink" title="How can I get started?"></a>How can I get started?</h2><p>See our <a href="../docs/guide">guide</a> for in-depth instructions that will show several ways to quickly get started with A-Frame.</p>
-<h2 id="Does-A-Frame-support-feature"><a href="#Does-A-Frame-support-feature" class="headerlink" title="Does A-Frame support  feature?"></a>Does A-Frame support <xxx> feature?</xxx></h2><p>A-Frame ships with only so many standard components and primitives. However being based on top of an <a href="../docs/core">entity-component-system pattern</a>, A-Frame is highly extensible and modular. If a feature doesn’t exist, just <a href="../docs/core/component.html">write a component for it</a>! Or if one of the standard components is too limiting, <a href="https://github.com/aframevr/aframe/tree/master/src/components" target="_blank" rel="external">fork it</a>!</p>
+<h2 id="Does-A-Frame-support-X-feature"><a href="#Does-A-Frame-support-X-feature" class="headerlink" title="Does A-Frame support X feature?"></a>Does A-Frame support X feature?</h2><p>A-Frame ships with only so many standard components and primitives. However being based on top of an <a href="../docs/core">entity-component-system pattern</a>, A-Frame is highly extensible and modular. If a feature doesn’t exist, just <a href="../docs/core/component.html">write a component for it</a>! Or if one of the standard components is too limiting, <a href="https://github.com/aframevr/aframe/tree/master/src/components" target="_blank" rel="external">fork it</a>!</p>
 <p>Check out what the ecosystem has come up with on <a href="https://github.com/aframevr/awesome-aframe#components" target="_blank" rel="external">awesome-aframe’s collection of components</a>.</p>
 <h2 id="Is-anyone-working-on-Leap-Motion-support"><a href="#Is-anyone-working-on-Leap-Motion-support" class="headerlink" title="Is anyone working on Leap Motion support?"></a>Is anyone working on Leap Motion support?</h2><p>Many people and groups have expressed interest in creating a <a href="https://www.leapmotion.com/" target="_blank" rel="external">Leap Motion</a> <a href="../docs/core/component.html">component</a>. Nothing has been published yet.</p>
-<h2 id="Does-A-Frame-support-library-or-framework"><a href="#Does-A-Frame-support-library-or-framework" class="headerlink" title="Does A-Frame support  library or framework?"></a>Does A-Frame support <xxx> library or framework?</xxx></h2><p>Most likely, yes. A-Frame’s interface is through the standard HTML and DOM APIs, so there should be little reason why it shouldn’t. We’ve found A-Frame works wonderfully with:</p>
+<h2 id="Does-A-Frame-support-X-library-or-framework"><a href="#Does-A-Frame-support-X-library-or-framework" class="headerlink" title="Does A-Frame support X library or framework?"></a>Does A-Frame support X library or framework?</h2><p>Most likely, yes. A-Frame’s interface is through the standard HTML and DOM APIs, so there should be little reason why it shouldn’t. We’ve found A-Frame works wonderfully with:</p>
 <ul>
 <li><a href="https://github.com/ngokevin/aframe-react" target="_blank" rel="external">React</a></li>
 <li><a href="https://www.youtube.com/watch?v=Tb2b5nFmmsM" target="_blank" rel="external">D3.js</a></li>
@@ -145,13 +150,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <li><a href="https://github.com/Popmotion/aframe-role" target="_blank" rel="external">Popmotion Role</a></li>
 </ul>
 <h2 id="Why-does-my-video-not-play-on-mobile"><a href="#Why-does-my-video-not-play-on-mobile" class="headerlink" title="Why does my video not play on mobile?"></a>Why does my video not play on mobile?</h2><p>Mobile browsers have limitations with displaying inline video.</p>
-<p>On iOS to get inline video with autoplay, we must:</p>
+<p>Because of an <a href="https://developer.apple.com/library/iad/documentation/UserExperience/Conceptual/iAdJSProgGuide/PlayingVideosinAds/PlayingVideosinAds.html" target="_blank" rel="external">iOS platform restriction</a> in order to get inline video (with or without autoplay), we must:</p>
 <ul>
 <li>Set the <code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</code> metatag.</li>
 <li>Set the <code>webkit-playsinline</code> attribute to the video element.</li>
 <li>Pin the webpage to the iOS homescreen.</li>
 </ul>
-<p>On Android, we must:</p>
+<p>On certain Android devices or browsers, we must:</p>
 <ul>
 <li>Require user interaction to trigger the video (such as a click or tap event).</li>
 </ul>
@@ -160,6 +165,7 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <li>Instructions and UI to the user the necessary steps to get mobile video playing (pin-to-homescreen, tap).</li>
 <li>Out-of-the-box components for routing user-triggered events in order to play videos.</li>
 </ul>
+<h2 id="Can-I-render-YouTube-videos-as-a-texture"><a href="#Can-I-render-YouTube-videos-as-a-texture" class="headerlink" title="Can I render YouTube videos as a texture?"></a>Can I render YouTube videos as a texture?</h2><p>With some manual effort, you could either proxy YouTube videos as a texture or download them locally to serve, but that is against their terms of service.</p>
 <h2 id="How-do-I-display-lt-iframe-gt-s-or-render-HTML-in-A-Frame"><a href="#How-do-I-display-lt-iframe-gt-s-or-render-HTML-in-A-Frame" class="headerlink" title="How do I display &lt;iframe&gt;s or render HTML in A-Frame?"></a>How do I display <code>&lt;iframe&gt;</code>s or render HTML in A-Frame?</h2><p>Currently as a limitation of the browser, <code>&lt;iframe&gt;</code>s can not be displayed within A-Frame, used as a texture, or be mixed with WebGL or WebVR. While it is possible to <a href="http://learningthreejs.com/blog/2013/04/30/closing-the-gap-between-html-and-webgl/" target="_blank" rel="external">overlay an iframe on top of the scene</a>, it won’t display properly in stereoscopic mode (VR) with proper distortion, and it won’t be properly shaded. There may be browser features in the future that will help enable this.</p>
 <p>To render HTML as a texture in A-Frame, it is not as easy as dropping HTML into <code>&lt;a-scene&gt;</code>. Solutions involve painting to a <code>&lt;canvas&gt;</code> and using the canvas as texture. The A-Frame community has shared some components for this:</p>
 <ul>
