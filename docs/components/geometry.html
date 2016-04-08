@@ -384,14 +384,19 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 </thead>
 <tbody>
 <tr>
+<td>buffer</td>
+<td>Transform geometry into a BufferGeometry to reduce memory usage at the cost of being harder to manipulate.</td>
+<td>true</td>
+</tr>
+<tr>
 <td>primitive</td>
 <td>One of <code>box</code>, <code>circle</code>, <code>cone</code>, <code>cylinder</code>, <code>plane</code>, <code>ring</code>, <code>sphere</code>, <code>torus</code>, <code>torusKnot</code>.</td>
 <td>None</td>
 </tr>
 <tr>
-<td>translate</td>
-<td>Translates the geometry relative to its pivot point.</td>
-<td>0 0 0</td>
+<td>skipCache</td>
+<td>Disable retrieving the shared geometry object from the cache.</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>
