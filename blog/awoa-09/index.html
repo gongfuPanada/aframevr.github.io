@@ -7,10 +7,11 @@
 
 
 
+
 <!DOCTYPE html>
-<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="" data-ga-id="UA-24056643-4">
+<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="false" data-ga-id="UA-24056643-4" data-aframe-version="0.2.0" data-docs-version="blog">
   <head>
-    <title>A Week of A-Frame 9 — A-Frame</title>
+    <title>A Week of A-Frame 9 – A-Frame</title>
     
 
 <script>
@@ -26,11 +27,12 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="description" content="A-Frame – Building Blocks for the VR Web">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="canonical" href="https://aframe.io">
     <meta property="fb:app_id" content="1535794316743373">
     <meta property="og:title" content="A-Frame">
     <meta property="og:site_name" content="A-Frame">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aframe.io/">
+    <meta property="og:url" content="https://aframe.io">
     <meta property="og:description" content="Building Blocks for the VR Web">
     <meta property="og:image" content="http://aframe.io/images/card.png">
     <meta property="og:image:secure_url" content="https://aframe.io/images/card.png">
@@ -44,13 +46,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="black">
-    <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/images/aframe-logo-152.png">
+    <link rel="apple-touch-icon" href="https://aframe.io/images/aframe-logo-152.png">
 
-    <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Feed" href="https://aframe.io/feed.xml">
 
     <script src="/js/compat.js"></script>
 
@@ -96,37 +98,68 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
   <ul id="nav" class="nav">
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Guide</span></a></li>
+      <li  class="nav-item">
+        <a href="/docs/0.2.0/guide/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Docs</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/getting-started.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
+      <li  class="nav-item">
+        <a href="/examples/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Examples</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/examples/" class="nav-link nav-link-docs"><span>Examples</span></a></li>
+      <li  class="nav-item">
+        <a href="/faq/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>FAQ</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/faq/" class="nav-link nav-link-docs"><span>FAQ</span></a></li>
+      <li  class="nav-item">
+        <a href="/blog/"
+           class="nav-link nav-link-docs current"
+           
+           >
+          <span>Blog</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/blog/" class="nav-link nav-link-docs current"><span>Blog</span></a></li>
+      <li  class="nav-item">
+        <a href="/community/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Community</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/community/" class="nav-link nav-link-docs"><span>Community</span></a></li>
+      <li  data-slug="github" class="nav-item">
+        <a href="https://github.com/aframevr/aframe/"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame project repository on GitHub">
+          <span>GitHub</span>
+        </a>
+      </li>
     
-      <li
-         data-slug="github"
-        class="nav-item"><a href="https://github.com/aframevr/aframe/" class="nav-link nav-link-docs" rel="external" title="A-Frame project repository on GitHub"><span>GitHub</span></a></li>
-    
-      <li
-         data-slug="slug"
-        class="nav-item"><a href="https://aframevr-slack.herokuapp.com" class="nav-link nav-link-docs" rel="external" title="A-Frame Slack (sign up)"><span>Slack</span></a></li>
+      <li  data-slug="slug" class="nav-item">
+        <a href="https://aframevr-slack.herokuapp.com"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame Slack (sign up)">
+          <span>Slack</span>
+        </a>
+      </li>
     
   </ul>
 </div>
@@ -149,22 +182,34 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 
         
+          <p>What's up with A-Frame for the week of Apr 8, 2016 to Apr 15, 2016.</p>
+          <p>A-Frame is a WebVR framework for building virtual reality experiences with HTML.</p>
           <div class="post__projects">
   
-    <a href="http://drawvr.com/escape/" title="Escape Game"
-       style="background-image: url(/images/awoa/escape.jpg)"></a>
+    
+      <a href="http://drawvr.com/escape/" title="Escape Game"
+         style="background-image: url(/images/awoa/escape.jpg)"></a>
+    
   
-    <a href="http://drawvr.com/escape2/" title="Escape 2: The Game"
-       style="background-image: url(/images/awoa/escape2.jpg)"></a>
+    
+      <a href="http://drawvr.com/escape2/" title="Escape 2: The Game"
+         style="background-image: url(/images/awoa/escape2.jpg)"></a>
+    
   
-    <a href="https://mayognaise.github.io/aframe-gif-component/basic/index.html" title="GIF Component"
-       style="background-image: url(/images/awoa/gif-component.gif)"></a>
+    
+      <a href="https://mayognaise.github.io/aframe-gif-component/basic/index.html" title="GIF Component"
+         style="background-image: url(/images/awoa/gif-component.gif)"></a>
+    
   
-    <a href="https://mayognaise.github.io/aframe-mouse-cursor-component/basic/index.html" title="Mouse Cursor Component"
-       style="background-image: url(/images/awoa/mouse-cursor-component.gif)"></a>
+    
+      <a href="https://mayognaise.github.io/aframe-mouse-cursor-component/basic/index.html" title="Mouse Cursor Component"
+         style="background-image: url(/images/awoa/mouse-cursor-component.gif)"></a>
+    
   
-    <a href="https://mayognaise.github.io/aframe-drag-look-controls-component/basic/index.html" title="Drag Look Controls Component"
-       style="background-image: url(/images/awoa/drag-look-controls-component.gif)"></a>
+    
+      <a href="https://mayognaise.github.io/aframe-drag-look-controls-component/basic/index.html" title="Drag Look Controls Component"
+         style="background-image: url(/images/awoa/drag-look-controls-component.gif)"></a>
+    
   
 </div>
 
@@ -178,13 +223,48 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
         
           
-  <h3>Notable Contributions</h3>
+  <h3>Projects</h3>
+  <ul class="post__projects-text">
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/dkraeker">dkraeker</a> built <a href="http://drawvr.com/escape/">Escape Game</a> &mdash; <p>Can you escape?</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/dkraeker">dkraeker</a> built <a href="http://drawvr.com/escape2/">Escape 2: The Game</a> &mdash; <p>Can you escape? Electric boogaloo.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://mayognaise.github.io/aframe-gif-component/basic/index.html">GIF Component</a> &mdash; <p>A GIF component to display GIF animations as a material. If only there were a component to resolve whether GIF is pronounced with a hard-G or a soft-G.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://mayognaise.github.io/aframe-mouse-cursor-component/basic/index.html">Mouse Cursor Component</a> &mdash; <p>A cursor component that uses the mouse rather than the Cardboard-style cursor that ships with A-Frame.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://mayognaise.github.io/aframe-drag-look-controls-component/basic/index.html">Drag Look Controls Component</a> &mdash; <p>A controls component where the canvas moves the way you drag, and the cursor changes to grab-style.</p>
+
+      </li>
+    
+  </ul>
+
+
+          
+
+          
+  <h3>Contributions</h3>
   <ul class="post__projects-text">
     
       <li>
         <a class="blog-attribution" href="https://github.com/dmarcos">dmarcos</a>
         <a href="https://github.com/aframevr/aframe/pull/1323">heavily optimized</a>
-        performance by making less trips to the DOM, caching parsed component data, and only flushing stringified component data to DOM on developer demand.
+        <p>performance by making less trips to the DOM, caching parsed component data, and only flushing stringified component data to DOM on developer demand.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -194,7 +274,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1347">reduced</a>
-        memory usage with a geometry caching system.
+        <p>memory usage with a geometry caching system.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -204,7 +285,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1338">heavily reduced</a>
-        memory usage by defaulting to BufferGeometries for the geometry component.
+        <p>memory usage by defaulting to BufferGeometries for the geometry component.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -214,7 +296,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1287">reduced</a>
-        memory usage by disposing of geometries and materials when no longer in use.
+        <p>memory usage by disposing of geometries and materials when no longer in use.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -224,7 +307,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/johnrodney">johnrodney</a>
         <a href="https://github.com/aframevr/aframe/pull/1319">improved</a>
-        performance by reducing the sky primitive's default radius and segments.
+        <p>performance by reducing the sky primitive’s default radius and segments.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -234,7 +318,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1317">implemented</a>
-        a registerGeometry API such that each primitive has its own schema.
+        <p>a registerGeometry API such that each primitive has its own schema.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -244,7 +329,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1196">refactored and improved</a>
-        the raycaster and cursor components.
+        <p>the raycaster and cursor components.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -254,7 +340,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/donmccurdy">donmccurdy</a>
         <a href="https://github.com/aframevr/aframe/pull/1365">enabled</a>
-        unit testing with Chrome.
+        <p>unit testing with Chrome.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -264,7 +351,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/dbradleyfl">dbradleyfl</a>
         <a href="https://github.com/aframevr/aframe/pull/1366">improved</a>
-        GearVR support.
+        <p>GearVR support.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -274,40 +362,12 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/cvan">cvan</a>
         <a href="https://github.com/aframevr/aframe/pull/1368">tweaked</a>
-        the Enter VR modal's appearance.
+        <p>the Enter VR modal’s appearance.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
         
-      </li>
-    
-  </ul>
-
-
-          
-
-          
-  <h3>Projects</h3>
-  <ul class="post__projects-text">
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/dkraeker">dkraeker</a> built <a href="http://drawvr.com/escape/">Escape Game</a> &mdash; Can you escape?
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/dkraeker">dkraeker</a> built <a href="http://drawvr.com/escape2/">Escape 2: The Game</a> &mdash; Can you escape? Electric boogaloo.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://mayognaise.github.io/aframe-gif-component/basic/index.html">GIF Component</a> &mdash; A GIF component to display GIF animations as a material. If only there were a component to resolve whether GIF is pronounced with a hard-G or a soft-G.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://mayognaise.github.io/aframe-mouse-cursor-component/basic/index.html">Mouse Cursor Component</a> &mdash; A cursor component that uses the mouse rather than the Cardboard-style cursor that ships with A-Frame.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://mayognaise.github.io/aframe-drag-look-controls-component/basic/index.html">Drag Look Controls Component</a> &mdash; A controls component where the canvas moves the way you drag, and the cursor changes to grab-style.
       </li>
     
   </ul>
@@ -332,9 +392,9 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     
 
     <footer class="footer footnote">
-      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
       
-        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/awoa-09.md" class="github-file-link" target="_blank" rel="external">Suggest an edit to this post on GitHub</a></p>
+        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/awoa-09.md" class="github-file-link" rel="external">Suggest an edit to this post on GitHub</a></p>
       
     </footer>
   </div>

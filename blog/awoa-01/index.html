@@ -7,10 +7,11 @@
 
 
 
+
 <!DOCTYPE html>
-<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="" data-ga-id="UA-24056643-4">
+<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="false" data-ga-id="UA-24056643-4" data-aframe-version="0.2.0" data-docs-version="blog">
   <head>
-    <title>A Week of A-Frame 1 — A-Frame</title>
+    <title>A Week of A-Frame 1 – A-Frame</title>
     
 
 <script>
@@ -26,11 +27,12 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="description" content="A-Frame – Building Blocks for the VR Web">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="canonical" href="https://aframe.io">
     <meta property="fb:app_id" content="1535794316743373">
     <meta property="og:title" content="A-Frame">
     <meta property="og:site_name" content="A-Frame">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aframe.io/">
+    <meta property="og:url" content="https://aframe.io">
     <meta property="og:description" content="Building Blocks for the VR Web">
     <meta property="og:image" content="http://aframe.io/images/card.png">
     <meta property="og:image:secure_url" content="https://aframe.io/images/card.png">
@@ -44,13 +46,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="black">
-    <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/images/aframe-logo-152.png">
+    <link rel="apple-touch-icon" href="https://aframe.io/images/aframe-logo-152.png">
 
-    <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Feed" href="https://aframe.io/feed.xml">
 
     <script src="/js/compat.js"></script>
 
@@ -96,37 +98,68 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
   <ul id="nav" class="nav">
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Guide</span></a></li>
+      <li  class="nav-item">
+        <a href="/docs/0.2.0/guide/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Docs</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/getting-started.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
+      <li  class="nav-item">
+        <a href="/examples/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Examples</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/examples/" class="nav-link nav-link-docs"><span>Examples</span></a></li>
+      <li  class="nav-item">
+        <a href="/faq/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>FAQ</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/faq/" class="nav-link nav-link-docs"><span>FAQ</span></a></li>
+      <li  class="nav-item">
+        <a href="/blog/"
+           class="nav-link nav-link-docs current"
+           
+           >
+          <span>Blog</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/blog/" class="nav-link nav-link-docs current"><span>Blog</span></a></li>
+      <li  class="nav-item">
+        <a href="/community/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Community</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/community/" class="nav-link nav-link-docs"><span>Community</span></a></li>
+      <li  data-slug="github" class="nav-item">
+        <a href="https://github.com/aframevr/aframe/"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame project repository on GitHub">
+          <span>GitHub</span>
+        </a>
+      </li>
     
-      <li
-         data-slug="github"
-        class="nav-item"><a href="https://github.com/aframevr/aframe/" class="nav-link nav-link-docs" rel="external" title="A-Frame project repository on GitHub"><span>GitHub</span></a></li>
-    
-      <li
-         data-slug="slug"
-        class="nav-item"><a href="https://aframevr-slack.herokuapp.com" class="nav-link nav-link-docs" rel="external" title="A-Frame Slack (sign up)"><span>Slack</span></a></li>
+      <li  data-slug="slug" class="nav-item">
+        <a href="https://aframevr-slack.herokuapp.com"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame Slack (sign up)">
+          <span>Slack</span>
+        </a>
+      </li>
     
   </ul>
 </div>
@@ -149,22 +182,34 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 
         
+          <p>What's up with A-Frame for the week of Jan 15, 2016 to Jan 22, 2016.</p>
+          <p>A-Frame is a WebVR framework for building virtual reality experiences with HTML.</p>
           <div class="post__projects">
   
-    <a href="http://stampswebdesign.com/withersc/hud/" title="Virtual Art School Tour"
-       style="background-image: url(/images/awoa/virtual-art-school-tour.jpg)"></a>
+    
+      <a href="http://stampswebdesign.com/withersc/hud/" title="Virtual Art School Tour"
+         style="background-image: url(/images/awoa/virtual-art-school-tour.jpg)"></a>
+    
   
-    <a href="https://chrismwaite.github.io/cardboard-dungeon/" title="Cardboard Dungeon"
-       style="background-image: url(/images/awoa/cardboard-dungeon.jpg)"></a>
+    
+      <a href="https://chrismwaite.github.io/cardboard-dungeon/" title="Cardboard Dungeon"
+         style="background-image: url(/images/awoa/cardboard-dungeon.jpg)"></a>
+    
   
-    <a href="https://ybinstock.github.io/concert_hall_360/" title="Concert Hall 360"
-       style="background-image: url(/images/awoa/concert-hall-360.jpg)"></a>
+    
+      <a href="https://ybinstock.github.io/concert_hall_360/" title="Concert Hall 360"
+         style="background-image: url(/images/awoa/concert-hall-360.jpg)"></a>
+    
   
-    <a href="https://ybinstock.github.io/carmensandiego_360/" title="Where in the World is Carmen Sandiego?"
-       style="background-image: url(/images/awoa/where-in-the-world-is-carmen-sandiego.jpg)"></a>
+    
+      <a href="https://ybinstock.github.io/carmensandiego_360/" title="Where in the World is Carmen Sandiego?"
+         style="background-image: url(/images/awoa/where-in-the-world-is-carmen-sandiego.jpg)"></a>
+    
   
-    <a href="https://i3games.github.io/aframe-cardboard-demo/" title="Cardboard Treasure Hunt Example"
-       style="background-image: url(/images/awoa/cardboard-treasure-hunt-example.jpg)"></a>
+    
+      <a href="https://i3games.github.io/aframe-cardboard-demo/" title="Cardboard Treasure Hunt Example"
+         style="background-image: url(/images/awoa/cardboard-treasure-hunt-example.jpg)"></a>
+    
   
 </div>
 
@@ -173,42 +218,47 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
         
 
 
-        <h3 id="Guides"><a href="#Guides" class="headerlink" title="Guides"></a>Guides</h3><ul>
+        <h3 id="guides"><a href="#guides" class="headerlink" title="Guides"></a>Guides</h3><ul>
 <li><a href="http://twitter.com/hololeo" target="_blank" rel="external">@hololeo</a> recorded <a href="https://www.youtube.com/watch?v=Tt-pX1JMt60" target="_blank" rel="external">Using A-Frame with Epson Moverio and Crosswalk</a>, explaining how to build VR apps for the Epson Moverio AR smart glasses with Crosswalk + A-Frame.</li>
 </ul>
 
 
         
           
-
-          
-
-          
   <h3>Projects</h3>
   <ul class="post__projects-text">
     
       <li>
-        <a class="blog-attribution" href="https://github.com/withersc">withersc</a> built <a href="http://stampswebdesign.com/withersc/hud/">Virtual Art School Tour</a> &mdash; A tour of the Stamps School for Art & Design with a 360&deg; photo carousel.
+        <a class="blog-attribution" href="https://github.com/withersc">withersc</a> built <a href="http://stampswebdesign.com/withersc/hud/">Virtual Art School Tour</a> &mdash; <p>A tour of the Stamps School for Art &amp; Design with a 360&deg; photo carousel.</p>
+
       </li>
     
       <li>
-        <a class="blog-attribution" href="https://github.com/chrismwaite">chrismwaite</a> built <a href="https://chrismwaite.github.io/cardboard-dungeon/">Cardboard Dungeon</a> &mdash; A first-person dungeon crawler.
+        <a class="blog-attribution" href="https://github.com/chrismwaite">chrismwaite</a> built <a href="https://chrismwaite.github.io/cardboard-dungeon/">Cardboard Dungeon</a> &mdash; <p>A first-person dungeon crawler.</p>
+
       </li>
     
       <li>
-        <a class="blog-attribution" href="https://github.com/ybinstock">ybinstock</a> built <a href="https://ybinstock.github.io/concert_hall_360/">Concert Hall 360</a> &mdash; A 360&deg; view of a concert hall with Vivaldi playing in the background.
+        <a class="blog-attribution" href="https://github.com/ybinstock">ybinstock</a> built <a href="https://ybinstock.github.io/concert_hall_360/">Concert Hall 360</a> &mdash; <p>A 360&deg; view of a concert hall with Vivaldi playing in the background.</p>
+
       </li>
     
       <li>
-        <a class="blog-attribution" href="https://github.com/ybinstock">ybinstock</a> built <a href="https://ybinstock.github.io/carmensandiego_360/">Where in the World is Carmen Sandiego?</a> &mdash; A scavenger hunt game based on the popular series.
+        <a class="blog-attribution" href="https://github.com/ybinstock">ybinstock</a> built <a href="https://ybinstock.github.io/carmensandiego_360/">Where in the World is Carmen Sandiego?</a> &mdash; <p>A scavenger hunt game based on the popular series.</p>
+
       </li>
     
       <li>
-        <a class="blog-attribution" href="https://github.com/i3games">i3games</a> built <a href="https://i3games.github.io/aframe-cardboard-demo/">Cardboard Treasure Hunt Example</a> &mdash; A clone of Google Cardboard's Treasure Hunt Example.
+        <a class="blog-attribution" href="https://github.com/i3games">i3games</a> built <a href="https://i3games.github.io/aframe-cardboard-demo/">Cardboard Treasure Hunt Example</a> &mdash; <p>A clone of Google Cardboard’s Treasure Hunt Example.</p>
+
       </li>
     
   </ul>
 
+
+          
+
+          
 
         
 
@@ -229,9 +279,9 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     
 
     <footer class="footer footnote">
-      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
       
-        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/awoa-01.md" class="github-file-link" target="_blank" rel="external">Suggest an edit to this post on GitHub</a></p>
+        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/awoa-01.md" class="github-file-link" rel="external">Suggest an edit to this post on GitHub</a></p>
       
     </footer>
   </div>

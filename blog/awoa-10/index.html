@@ -7,10 +7,11 @@
 
 
 
+
 <!DOCTYPE html>
-<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="" data-ga-id="UA-24056643-4">
+<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="false" data-ga-id="UA-24056643-4" data-aframe-version="0.2.0" data-docs-version="blog">
   <head>
-    <title>A Week of A-Frame 10 — A-Frame</title>
+    <title>A Week of A-Frame 10 – A-Frame</title>
     
 
 <script>
@@ -26,11 +27,12 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="description" content="A-Frame – Building Blocks for the VR Web">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="canonical" href="https://aframe.io">
     <meta property="fb:app_id" content="1535794316743373">
     <meta property="og:title" content="A-Frame">
     <meta property="og:site_name" content="A-Frame">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aframe.io/">
+    <meta property="og:url" content="https://aframe.io">
     <meta property="og:description" content="Building Blocks for the VR Web">
     <meta property="og:image" content="http://aframe.io/images/card.png">
     <meta property="og:image:secure_url" content="https://aframe.io/images/card.png">
@@ -44,13 +46,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="black">
-    <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/images/aframe-logo-152.png">
+    <link rel="apple-touch-icon" href="https://aframe.io/images/aframe-logo-152.png">
 
-    <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Feed" href="https://aframe.io/feed.xml">
 
     <script src="/js/compat.js"></script>
 
@@ -96,37 +98,68 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
   <ul id="nav" class="nav">
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Guide</span></a></li>
+      <li  class="nav-item">
+        <a href="/docs/0.2.0/guide/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Docs</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/getting-started.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
+      <li  class="nav-item">
+        <a href="/examples/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Examples</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/examples/" class="nav-link nav-link-docs"><span>Examples</span></a></li>
+      <li  class="nav-item">
+        <a href="/faq/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>FAQ</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/faq/" class="nav-link nav-link-docs"><span>FAQ</span></a></li>
+      <li  class="nav-item">
+        <a href="/blog/"
+           class="nav-link nav-link-docs current"
+           
+           >
+          <span>Blog</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/blog/" class="nav-link nav-link-docs current"><span>Blog</span></a></li>
+      <li  class="nav-item">
+        <a href="/community/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Community</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/community/" class="nav-link nav-link-docs"><span>Community</span></a></li>
+      <li  data-slug="github" class="nav-item">
+        <a href="https://github.com/aframevr/aframe/"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame project repository on GitHub">
+          <span>GitHub</span>
+        </a>
+      </li>
     
-      <li
-         data-slug="github"
-        class="nav-item"><a href="https://github.com/aframevr/aframe/" class="nav-link nav-link-docs" rel="external" title="A-Frame project repository on GitHub"><span>GitHub</span></a></li>
-    
-      <li
-         data-slug="slug"
-        class="nav-item"><a href="https://aframevr-slack.herokuapp.com" class="nav-link nav-link-docs" rel="external" title="A-Frame Slack (sign up)"><span>Slack</span></a></li>
+      <li  data-slug="slug" class="nav-item">
+        <a href="https://aframevr-slack.herokuapp.com"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame Slack (sign up)">
+          <span>Slack</span>
+        </a>
+      </li>
     
   </ul>
 </div>
@@ -149,46 +182,74 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 
         
+          <p>What's up with A-Frame for the week of Apr 15, 2016 to Apr 22, 2016.</p>
+          <p>A-Frame is a WebVR framework for building virtual reality experiences with HTML.</p>
           <div class="post__projects">
   
-    <a href="https://github.com/AltspaceVR/aframe-altspace-component" title="AltSpaceVR Component"
-       style="background-image: url(/images/awoa/altspacevr.jpg)"></a>
+    
+      <a href="https://github.com/AltspaceVR/aframe-altspace-component" title="AltSpaceVR Component"
+         style="background-image: url(/images/awoa/altspacevr.jpg)"></a>
+    
   
-    <a href="http://topanga-band.com/electrocat/index.html" title="Electrocat"
-       style="background-image: url(/images/awoa/electrocat.jpg)"></a>
+    
+      <a href="http://topanga-band.com/electrocat/index.html" title="Electrocat"
+         style="background-image: url(/images/awoa/electrocat.jpg)"></a>
+    
   
-    <a href="https://github.com/mayognaise/aframe-draw-shader" title="Draw Shader"
-       style="background-image: url(/images/awoa/draw-shader.gif)"></a>
+    
+      <a href="https://github.com/mayognaise/aframe-draw-shader" title="Draw Shader"
+         style="background-image: url(/images/awoa/draw-shader.gif)"></a>
+    
   
-    <a href="https://github.com/mayognaise/aframe-html-shader" title="HTML Shader"
-       style="background-image: url(/images/awoa/html-shader.gif)"></a>
+    
+      <a href="https://github.com/mayognaise/aframe-html-shader" title="HTML Shader"
+         style="background-image: url(/images/awoa/html-shader.gif)"></a>
+    
   
-    <a href="https://github.com/mayognaise/aframe-video-shader" title="Video Shader"
-       style="background-image: url(/images/awoa/video-shader.gif)"></a>
+    
+      <a href="https://github.com/mayognaise/aframe-video-shader" title="Video Shader"
+         style="background-image: url(/images/awoa/video-shader.gif)"></a>
+    
   
-    <a href="https://github.com/mayognaise/aframe-gif-shader" title="GIF Shader"
-       style="background-image: url(/images/awoa/gif-shader.gif)"></a>
+    
+      <a href="https://github.com/mayognaise/aframe-gif-shader" title="GIF Shader"
+         style="background-image: url(/images/awoa/gif-shader.gif)"></a>
+    
   
-    <a href="http://www.skyislandsvr.com/pages/overwater.html" title="Sky Islands VR"
-       style="background-image: url(/images/awoa/skyislandsvr.gif)"></a>
+    
+      <a href="http://www.skyislandsvr.com/pages/overwater.html" title="Sky Islands VR"
+         style="background-image: url(/images/awoa/skyislandsvr.gif)"></a>
+    
   
-    <a href="https://www.scenevr.com/scenes/398/view" title="Voxel Castle"
-       style="background-image: url(/images/awoa/voxel-castle.jpg)"></a>
+    
+      <a href="https://www.scenevr.com/scenes/398/view" title="Voxel Castle"
+         style="background-image: url(/images/awoa/voxel-castle.jpg)"></a>
+    
   
-    <a href="https://www.scenevr.com/scenes/397/view" title="Monument Valley Castle"
-       style="background-image: url(/images/awoa/monument-valley-castle.jpg)"></a>
+    
+      <a href="https://www.scenevr.com/scenes/397/view" title="Monument Valley Castle"
+         style="background-image: url(/images/awoa/monument-valley-castle.jpg)"></a>
+    
   
-    <a href="https://atomicguy.github.io/aframe-fence-component/basic/index.html" title="Fence Component"
-       style="background-image: url(/images/awoa/fence-component.jpg)"></a>
+    
+      <a href="https://atomicguy.github.io/aframe-fence-component/basic/index.html" title="Fence Component"
+         style="background-image: url(/images/awoa/fence-component.jpg)"></a>
+    
   
-    <a href="https://github.com/andreasplesch/aframe-meshline-component" title="Mesh Line Component"
-       style="background-image: url(/images/awoa/meshline.jpg)"></a>
+    
+      <a href="https://github.com/andreasplesch/aframe-meshline-component" title="Mesh Line Component"
+         style="background-image: url(/images/awoa/meshline.jpg)"></a>
+    
   
-    <a href="https://github.com/ngokevin/aframe-randomizer-components" title="Randomizer Components"
-       style="background-image: url(/images/awoa/randomizer-components.jpg)"></a>
+    
+      <a href="https://github.com/ngokevin/aframe-randomizer-components" title="Randomizer Components"
+         style="background-image: url(/images/awoa/randomizer-components.jpg)"></a>
+    
   
-    <a href="https://askatom.net/spvr" title="Victorian Exhibit"
-       style="background-image: url(/images/awoa/victorian.jpg)"></a>
+    
+      <a href="https://askatom.net/spvr" title="Victorian Exhibit"
+         style="background-image: url(/images/awoa/victorian.jpg)"></a>
+    
   
 </div>
 
@@ -202,13 +263,88 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
         
           
-  <h3>Notable Contributions</h3>
+  <h3>Projects</h3>
+  <ul class="post__projects-text">
+    
+      <li>
+        <a class="blog-attribution" href="http://altvr.com/">AltSpaceVR</a> built <a href="https://github.com/AltspaceVR/aframe-altspace-component">AltSpaceVR Component</a> &mdash; <p>A component that makes A-Frame scenes compatible with the social platform AltSpaceVR.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://twitter.com/jon_ibe">jon_ibe</a> built <a href="http://topanga-band.com/electrocat/index.html">Electrocat</a> &mdash; <p>Groove to Topanga’s music.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-draw-shader">Draw Shader</a> &mdash; <p>A shader to render from canvas.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-html-shader">HTML Shader</a> &mdash; <p>A shader to render HTML using html2canvas.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-video-shader">Video Shader</a> &mdash; <p>A shader to render video, primarily for iOS inline playback.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-gif-shader">GIF Shader</a> &mdash; <p>A shader to display GIFs.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://twitter.com/ericalayton">ericalayton</a> built <a href="http://www.skyislandsvr.com/pages/overwater.html">Sky Islands VR</a> &mdash; <p>Islands floating over water.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://twitter.com/scenevr">scenevr</a> built <a href="https://www.scenevr.com/scenes/398/view">Voxel Castle</a> &mdash; <p>A castle created with MagicaVoxel, baked in Blender, and hosted on SceneVR.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://twitter.com/scenevr">scenevr</a> built <a href="https://www.scenevr.com/scenes/397/view">Monument Valley Castle</a> &mdash; <p>Another castle created with MagicaVoxel, baked in Blender, and hosted on SceneVR.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/atomicguy">atomicguy</a> built <a href="https://atomicguy.github.io/aframe-fence-component/basic/index.html">Fence Component</a> &mdash; <p>A component to set boundaries on an entity’s position.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/andreasplesch">andreasplesch</a> built <a href="https://github.com/andreasplesch/aframe-meshline-component">Mesh Line Component</a> &mdash; <p>A component to draw some nice thick lines.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a> built <a href="https://github.com/ngokevin/aframe-randomizer-components">Randomizer Components</a> &mdash; <p>A component that set random values.</p>
+
+      </li>
+    
+      <li>
+        <a class="blog-attribution" href="https://github.com/atomicguy">atomicguy</a> built <a href="https://askatom.net/spvr">Victorian Exhibit</a> &mdash; <p>A quaint museum visit.</p>
+
+      </li>
+    
+  </ul>
+
+
+          
+
+          
+  <h3>Contributions</h3>
   <ul class="post__projects-text">
     
       <li>
         <a class="blog-attribution" href="https://github.com/dmarcos">dmarcos</a>
         <a href="https://github.com/aframevr/aframe/pull/1257">implemented</a>
-        a geometry merging API to reduce the number of draw calls.
+        <p>a geometry merging API to reduce the number of draw calls.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -218,7 +354,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/enjalot">enjalot</a>
         <a href="https://github.com/aframevr/aframe/pull/1322">fixed</a>
-        canvas size being overwritten when providing a canvas.
+        <p>canvas size being overwritten when providing a canvas.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -228,7 +365,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1394">organized</a>
-        and cleaned up all of the examples.
+        <p>and cleaned up all of the examples.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -238,7 +376,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a>
         <a href="https://github.com/aframevr/aframe/pull/1388">removed</a>
-        unnecessary object comparisons in material and sound component updates.
+        <p>unnecessary object comparisons in material and sound component updates.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -248,7 +387,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/andreasplesch">andreasplesch</a>
         <a href="https://github.com/ngokevin/aframe-template-component/pull/6">enabled</a>
-        vanilla HTML templates when loading external templates.
+        <p>vanilla HTML templates when loading external templates.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
@@ -260,74 +400,14 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
       <li>
         <a class="blog-attribution" href="https://github.com/rangermauve">rangermauve</a>
         <a href="https://github.com/ngokevin/aframe-template-component/pull/9">enabled</a>
-        vanilla HTML templates when loading templates from a script tag.
+        <p>vanilla HTML templates when loading templates from a script tag.</p>
+
 
         <!-- If contribution is not to A-Frame proper (e.g., editor), then note project. -->
         
         
           (for <a href="https://github.com/ngokevin/aframe-template-component">ngokevin/aframe-template-component</a>)
         
-      </li>
-    
-  </ul>
-
-
-          
-
-          
-  <h3>Projects</h3>
-  <ul class="post__projects-text">
-    
-      <li>
-        <a class="blog-attribution" href="http://altvr.com/">AltSpaceVR</a> built <a href="https://github.com/AltspaceVR/aframe-altspace-component">AltSpaceVR Component</a> &mdash; A component that makes A-Frame scenes compatible with the social platform AltSpaceVR.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://twitter.com/jon_ibe">@jon_ibe</a> built <a href="http://topanga-band.com/electrocat/index.html">Electrocat</a> &mdash; Groove to Topanga's music.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-draw-shader">Draw Shader</a> &mdash; A shader to render from canvas.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-html-shader">HTML Shader</a> &mdash; A shader to render HTML using html2canvas.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-video-shader">Video Shader</a> &mdash; A shader to render video, primarily for iOS inline playback.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/mayognaise">mayognaise</a> built <a href="https://github.com/mayognaise/aframe-gif-shader">GIF Shader</a> &mdash; A shader to display GIFs.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://twitter.com/ericalayton">@ericalayton</a> built <a href="http://www.skyislandsvr.com/pages/overwater.html">Sky Islands VR</a> &mdash; Islands floating over water.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://twitter.com/scenevr">@scenevr</a> built <a href="https://www.scenevr.com/scenes/398/view">Voxel Castle</a> &mdash; A castle created with MagicaVoxel, baked in Blender, and hosted on SceneVR.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://twitter.com/scenevr">@scenevr</a> built <a href="https://www.scenevr.com/scenes/397/view">Monument Valley Castle</a> &mdash; Another castle created with MagicaVoxel, baked in Blender, and hosted on SceneVR.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/atomicguy">atomicguy</a> built <a href="https://atomicguy.github.io/aframe-fence-component/basic/index.html">Fence Component</a> &mdash; A component to set boundaries on an entity's position.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/andreasplesch">andreasplesch</a> built <a href="https://github.com/andreasplesch/aframe-meshline-component">Mesh Line Component</a> &mdash; A component to draw some nice thick lines.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/ngokevin">ngokevin</a> built <a href="https://github.com/ngokevin/aframe-randomizer-components">Randomizer Components</a> &mdash; A component that set random values.
-      </li>
-    
-      <li>
-        <a class="blog-attribution" href="https://github.com/atomicguy">atomicguy</a> built <a href="https://askatom.net/spvr">Victorian Exhibit</a> &mdash; A quaint museum visit.
       </li>
     
   </ul>
@@ -352,9 +432,9 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     
 
     <footer class="footer footnote">
-      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
       
-        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/awoa-10.md" class="github-file-link" target="_blank" rel="external">Suggest an edit to this post on GitHub</a></p>
+        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/awoa-10.md" class="github-file-link" rel="external">Suggest an edit to this post on GitHub</a></p>
       
     </footer>
   </div>

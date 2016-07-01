@@ -239,7 +239,7 @@ html {
   font-size: 14px;
 }
 body {
-  font: normal 1rem/1.5 Fira Sans, Helvetica, Arial, sans-serif;
+  font: 400 1.1rem/1.6 Fira Sans, Helvetica, Arial, sans-serif;
   color: #333;
 }
 .font-loaded-sans body {
@@ -267,34 +267,34 @@ a.borderless-link {
   position: absolute;
   width: 1px;
 }
+strong {
+  font-weight: 600;
+}
+code,
+pre {
+  font-size: 0.9rem;
+  font-family: Fira Mono, Andale Mono, Monaco, Courier, monospace;
+}
+.font-loaded-mono code,
+.font-loaded-mono pre {
+  font-family: Fira Mono, Andale Mono, Monaco, Courier, monospace;
+}
+code code,
+p code,
+li code,
+dd code {
+  font-weight: 600;
+  padding: 0 0.25ch;
+}
+p {
+  word-spacing: 0.05em;
+}
 h1,
 h2,
 h3,
 h4 {
   font-weight: 600;
   color: #2c3e50;
-}
-strong {
-  font-weight: 600;
-}
-code,
-pre {
-  background-color: #f8f8f8;
-  font: 0.8rem Fira Mono, Andale Mono, Monaco, Courier, monospace;
-}
-.font-loaded-mono code,
-.font-loaded-mono pre {
-  font-family: Fira Mono, Andale Mono, Monaco, Courier, monospace;
-}
-code {
-  color: #e96900;
-  padding: 3px 5px;
-  margin: 0 2px;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-p {
-  word-spacing: 0.05em;
 }
 .btn {
   cursor: pointer;
@@ -341,6 +341,13 @@ p {
   margin: 2em 0 0.8em;
   padding-bottom: 0.7em;
   border-bottom: 1px solid #ddd;
+}
+.copy h3 {
+  color: #476582;
+}
+.copy h3,
+.copy h3 code {
+  font-size: 1.3rem;
 }
 .copy h3,
 .copy h4 {
@@ -439,6 +446,10 @@ p {
   margin-left: 1em;
   padding-left: 1em;
 }
+.copy ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
 .copy ol {
   list-style: decimal;
   margin-left: 1em;
@@ -446,6 +457,9 @@ p {
 }
 .copy ol ol {
   list-style: circle;
+}
+.copy li + li {
+  margin-top: 0.35rem;
 }
 .logo__wordmark {
   background: url("../images/aframe-name-pink.svg") no-repeat;
@@ -532,6 +546,9 @@ a.click {
   color: #ef2d5e;
   font-weight: 600;
 }
+.nav-link-disabled {
+  pointer-events: none;
+}
 .nav-item {
   font-family: Fira Mono, Andale Mono, Monaco, Courier, monospace;
   text-transform: uppercase;
@@ -572,7 +589,7 @@ a.click {
 }
 .sidebar {
   padding: 40px;
-  width: 260px;
+  width: 280px;
 }
 .content {
   flex: 1;
@@ -614,9 +631,9 @@ a.click {
 .copy__wrap > table th {
   background: #2ac;
   color: #fff;
-  font-size: 0.8em;
-  font-weight: 500;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.8;
   text-align: left;
   white-space: nowrap;
 }
@@ -625,9 +642,11 @@ a.click {
 }
 .copy__wrap > table td {
   background: #fff;
-  border-bottom: 1px solid #eee;
-  font-size: 12px;
+  font-size: 0.9rem;
   vertical-align: top;
+}
+.copy__wrap > table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
 }
 .content--structured .page__section {
   font-size: 11px;
@@ -639,7 +658,8 @@ a.click {
 .content--structured .page__section a {
   display: block;
 }
-.section-title {
+.section-title,
+.subnav-label {
   font-size: 11px;
   line-height: 1.2;
   padding: 5px 0 10px;
@@ -662,7 +682,7 @@ a.click {
 .post__projects {
   display: flex;
   flex-wrap: wrap;
-  margin: 15px 0 15px -1px;
+  margin: 15px 0 25px -1px;
 }
 .post__projects a {
   background-position: center;
@@ -678,6 +698,9 @@ a.click {
 }
 .post-listing .post__projects a:nth-child(2) ~ a {
   display: none;
+}
+.post__projects-text li p {
+  display: inline;
 }
 .post__projects-text .blog-attribution {
   border: none;
@@ -700,6 +723,12 @@ a.click {
   display: block;
   margin-top: 20px;
 }
+.post .guide-links .float-right {
+  text-align: right;
+}
+.post .guide-links span {
+  max-width: 40%;
+}
 .section-title-active {
   cursor: pointer;
 }
@@ -716,7 +745,7 @@ a.click {
 .highlight {
   position: relative;
   background-color: #f8f8f8;
-  padding: 0.8em 0.8em 0.4em;
+  padding: 0.2em 0.2em 0.1em;
   line-height: 1.1em;
   border-radius: 2px;
   overflow-x: auto;
@@ -804,13 +833,12 @@ a.click {
   color: #fff;
   display: inline-block;
   font-family: Fira Mono, Andale Mono, Monaco, Courier, monospace;
-  font-weight: 600;
   margin: 5px 0;
   padding: 12px 24px;
   transition: 0.15s ease;
 }
 .copy a.btn.btn-download {
-  padding: 12px 14px;
+  padding: 12px 8px;
   min-width: 220px;
 }
 .copy a.btn:hover {
@@ -835,6 +863,10 @@ a.click {
   font-size: 0.8rem;
   font-weight: normal;
   margin-left: 10px;
+}
+.install-note:after {
+  display: block;
+  content: "";
 }
 .content--structured h2[id],
 .content--structured h3[id],
@@ -992,6 +1024,9 @@ a.click {
     margin-left: -25px;
     padding-left: 35px;
   }
+}
+video {
+  max-width: 100%;
 }
 #__bs_notify__ {
   display: none !important;

@@ -7,10 +7,11 @@
 
 
 
+
 <!DOCTYPE html>
-<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="" data-ga-id="UA-24056643-4">
+<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="false" data-ga-id="UA-24056643-4" data-aframe-version="0.2.0" data-docs-version="blog">
   <head>
-    <title>360&deg; Photosphere Viewer — A-Frame</title>
+    <title>360&deg; Photosphere Viewer – A-Frame</title>
     
 
 <script>
@@ -26,11 +27,12 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="description" content="A-Frame – Building Blocks for the VR Web">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="canonical" href="https://aframe.io">
     <meta property="fb:app_id" content="1535794316743373">
     <meta property="og:title" content="A-Frame">
     <meta property="og:site_name" content="A-Frame">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aframe.io/">
+    <meta property="og:url" content="https://aframe.io">
     <meta property="og:description" content="Building Blocks for the VR Web">
     <meta property="og:image" content="http://aframe.io/images/card.png">
     <meta property="og:image:secure_url" content="https://aframe.io/images/card.png">
@@ -44,13 +46,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="black">
-    <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/images/aframe-logo-152.png">
+    <link rel="apple-touch-icon" href="https://aframe.io/images/aframe-logo-152.png">
 
-    <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Feed" href="https://aframe.io/feed.xml">
 
     <script src="/js/compat.js"></script>
 
@@ -96,37 +98,68 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
   <ul id="nav" class="nav">
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Guide</span></a></li>
+      <li  class="nav-item">
+        <a href="/docs/0.2.0/guide/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Docs</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/getting-started.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
+      <li  class="nav-item">
+        <a href="/examples/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Examples</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/examples/" class="nav-link nav-link-docs"><span>Examples</span></a></li>
+      <li  class="nav-item">
+        <a href="/faq/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>FAQ</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/faq/" class="nav-link nav-link-docs"><span>FAQ</span></a></li>
+      <li  class="nav-item">
+        <a href="/blog/"
+           class="nav-link nav-link-docs current"
+           
+           >
+          <span>Blog</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/blog/" class="nav-link nav-link-docs current"><span>Blog</span></a></li>
+      <li  class="nav-item">
+        <a href="/community/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Community</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/community/" class="nav-link nav-link-docs"><span>Community</span></a></li>
+      <li  data-slug="github" class="nav-item">
+        <a href="https://github.com/aframevr/aframe/"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame project repository on GitHub">
+          <span>GitHub</span>
+        </a>
+      </li>
     
-      <li
-         data-slug="github"
-        class="nav-item"><a href="https://github.com/aframevr/aframe/" class="nav-link nav-link-docs" rel="external" title="A-Frame project repository on GitHub"><span>GitHub</span></a></li>
-    
-      <li
-         data-slug="slug"
-        class="nav-item"><a href="https://aframevr-slack.herokuapp.com" class="nav-link nav-link-docs" rel="external" title="A-Frame Slack (sign up)"><span>Slack</span></a></li>
+      <li  data-slug="slug" class="nav-item">
+        <a href="https://aframevr-slack.herokuapp.com"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame Slack (sign up)">
+          <span>Slack</span>
+        </a>
+      </li>
     
   </ul>
 </div>
@@ -168,7 +201,8 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 <p>Since I knew that A-Frame had been released I thought of implementing this app in A-Frame, as I thought it might be quite easy to do, AND I would learn coding in A-Frame.</p>
 <a id="more"></a>
 <p>After a few hours of playing around I realised that</p>
-<p>(a) yes it is easy to implement a photosphere BUT<br>(b) implementing a decent VR menu could not be done by just using A-Frame tags.</p>
+<p>(a) yes it is easy to implement a photosphere BUT
+(b) implementing a decent VR menu could not be done by just using A-Frame tags.</p>
 <p>Which lead me to implement my first component for A-Frame. As it turned out, I needed actually two components:</p>
 <p>The first component handles the VR photo menu (showing the menu, hiding the menu, position it in space). This component acts as a container for the photo thumbnails. You can check out the <a href="https://github.com/IdeaSpaceVR/aframe-360-degree-photosphere/blob/master/js/components/isvr_photosphere_menu.js" target="_blank" rel="external">source code here</a>. I have to admit that I was not able to write the code for positioning the menu in space. So I turned to <a href="http://stackoverflow.com/questions/34447119/positioning-a-three-js-object-in-front-of-the-camera-but-not-tied-to-the-camera" target="_blank" rel="external">Stack Overflow</a> which helped me out on that one (again).</p>
 <p>The second component is associated to each photo thumbnail within the menu container. I handles the selection of the photo via the mouse click event. I disabled the fuse cursors which would normally emit this click event. After many tests I decided that I did not like the fuse cursor for selecting photos. I guess people nowadays either have a Cardboard 2.0 (which supports a button) or an Oculus Rift and a mouse and keyboard. Additionally, I decided to only show the cursor when the menu is visible.</p>
@@ -205,9 +239,9 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     
 
     <footer class="footer footnote">
-      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
       
-        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/photosphere-viewer.md" class="github-file-link" target="_blank" rel="external">Suggest an edit to this post on GitHub</a></p>
+        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/photosphere-viewer.md" class="github-file-link" rel="external">Suggest an edit to this post on GitHub</a></p>
       
     </footer>
   </div>

@@ -7,10 +7,11 @@
 
 
 
+
 <!DOCTYPE html>
-<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="" data-ga-id="UA-24056643-4">
+<html lang="en" data-is-home="false" data-is-mobile="false" data-supports-vr="false" data-supports-touch="false" data-root-url="/" data-title="{title} | A-Frame" data-is-spa="false" data-ga-id="UA-24056643-4" data-aframe-version="0.2.0" data-docs-version="blog">
   <head>
-    <title>Sense of Scale with Spheres and Fog — A-Frame</title>
+    <title>Sense of Scale with Spheres and Fog – A-Frame</title>
     
 
 <script>
@@ -26,11 +27,12 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
     <meta name="description" content="A-Frame – Building Blocks for the VR Web">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link rel="canonical" href="https://aframe.io">
     <meta property="fb:app_id" content="1535794316743373">
     <meta property="og:title" content="A-Frame">
     <meta property="og:site_name" content="A-Frame">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aframe.io/">
+    <meta property="og:url" content="https://aframe.io">
     <meta property="og:description" content="Building Blocks for the VR Web">
     <meta property="og:image" content="http://aframe.io/images/card.png">
     <meta property="og:image:secure_url" content="https://aframe.io/images/card.png">
@@ -44,13 +46,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="black">
-    <link rel="icon" sizes="192x192" href="/images/aframe-logo-192.png">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/images/aframe-logo-152.png">
+    <link rel="apple-touch-icon" href="https://aframe.io/images/aframe-logo-152.png">
 
-    <link rel="alternate" type="application/rss+xml" title="Feed" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Feed" href="https://aframe.io/feed.xml">
 
     <script src="/js/compat.js"></script>
 
@@ -96,37 +98,68 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
   <ul id="nav" class="nav">
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/" class="nav-link nav-link-docs"><span>Guide</span></a></li>
+      <li  class="nav-item">
+        <a href="/docs/0.2.0/guide/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Docs</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/docs/guide/getting-started.html" class="nav-link nav-link-docs"><span>Install</span></a></li>
+      <li  class="nav-item">
+        <a href="/examples/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Examples</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/examples/" class="nav-link nav-link-docs"><span>Examples</span></a></li>
+      <li  class="nav-item">
+        <a href="/faq/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>FAQ</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/faq/" class="nav-link nav-link-docs"><span>FAQ</span></a></li>
+      <li  class="nav-item">
+        <a href="/blog/"
+           class="nav-link nav-link-docs current"
+           
+           >
+          <span>Blog</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/blog/" class="nav-link nav-link-docs current"><span>Blog</span></a></li>
+      <li  class="nav-item">
+        <a href="/community/"
+           class="nav-link nav-link-docs"
+           
+           >
+          <span>Community</span>
+        </a>
+      </li>
     
-      <li
-        
-        class="nav-item"><a href="/community/" class="nav-link nav-link-docs"><span>Community</span></a></li>
+      <li  data-slug="github" class="nav-item">
+        <a href="https://github.com/aframevr/aframe/"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame project repository on GitHub">
+          <span>GitHub</span>
+        </a>
+      </li>
     
-      <li
-         data-slug="github"
-        class="nav-item"><a href="https://github.com/aframevr/aframe/" class="nav-link nav-link-docs" rel="external" title="A-Frame project repository on GitHub"><span>GitHub</span></a></li>
-    
-      <li
-         data-slug="slug"
-        class="nav-item"><a href="https://aframevr-slack.herokuapp.com" class="nav-link nav-link-docs" rel="external" title="A-Frame Slack (sign up)"><span>Slack</span></a></li>
+      <li  data-slug="slug" class="nav-item">
+        <a href="https://aframevr-slack.herokuapp.com"
+           class="nav-link nav-link-docs"
+            rel="external"
+            title="A-Frame Slack (sign up)">
+          <span>Slack</span>
+        </a>
+      </li>
     
   </ul>
 </div>
@@ -162,13 +195,13 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
 
 
         <p>I like the <a href="https://aframe.io/examples/showcase/spheres-and-fog/">Spheres and Fog example</a> because it explores the sense of scale within virtual reality more than our other early examples. A series of spheres in the scene vary from 0.15 to 30 meters in radius, and a fog on <code>&lt;a-scene&gt;</code> amplifies the sense of size and distance:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a-scene</span> <span class="attr">fog</span>=<span class="string">"type: linear; color: #AAB; far: 30; near: 0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a-scene</span> <span class="attr">fog</span>=<span class="string">"type: linear; color: #AAB; far: 30; near: 0"</span>&gt;</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>The soft shadows under each sphere are faked with images. In Photoshop I created a circular gradient that fades from opaque to transparent. I applied this image as a child object of each sphere:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a-sphere</span> <span class="attr">position</span>=<span class="string">"-3 0 0"</span> <span class="attr">translate</span>=<span class="string">"0 1.75 0"</span> <span class="attr">radius</span>=<span class="string">"1.75"</span> <span class="attr">color</span>=<span class="string">"#7BC8A4"</span> <span class="attr">roughness</span>=<span class="string">"0.2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a-image</span> <span class="attr">src</span>=<span class="string">"../_images/radial-shadow-3.png"</span> <span class="attr">rotation</span>=<span class="string">"-90 0 0"</span> <span class="attr">scale</span>=<span class="string">"1.75 1.75 1.75"</span>&gt;</span><span class="tag">&lt;/<span class="name">a-image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a-sphere</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a-sphere</span> <span class="attr">position</span>=<span class="string">"-3 0 0"</span> <span class="attr">translate</span>=<span class="string">"0 1.75 0"</span> <span class="attr">radius</span>=<span class="string">"1.75"</span> <span class="attr">color</span>=<span class="string">"#7BC8A4"</span> <span class="attr">roughness</span>=<span class="string">"0.2"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a-image</span> <span class="attr">src</span>=<span class="string">"../_images/radial-shadow-3.png"</span> <span class="attr">rotation</span>=<span class="string">"-90 0 0"</span> <span class="attr">scale</span>=<span class="string">"1.75 1.75 1.75"</span>&gt;</span><span class="tag">&lt;/<span class="name">a-image</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">a-sphere</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>I rotated the images -90 degrees on the x-axis so that they lie flat, and then used scale to adjust their sizes to fit the proportions of their parent sphere.</p>
 <p>To make each sphere appear to sit on ground &mdash; neither too high nor too low &mdash; I used a translate value on each sphere, where the Y value was equal to the sphere radius:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a-sphere</span> <span class="attr">position</span>=<span class="string">"-15 0 5"</span> <span class="attr">translate</span>=<span class="string">"0 3 0"</span> <span class="attr">radius</span>=<span class="string">"3"</span> <span class="attr">color</span>=<span class="string">"#ECECEC"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a-sphere</span> <span class="attr">position</span>=<span class="string">"-15 0 5"</span> <span class="attr">translate</span>=<span class="string">"0 3 0"</span> <span class="attr">radius</span>=<span class="string">"3"</span> <span class="attr">color</span>=<span class="string">"#ECECEC"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>The translate component in A-Frame shifts the geometry of a primitive (or geometry component on an entity, if you’re using entities and components) relative to the object position. The position remains the same, but the visible geometry moves relative to it. This enabled me to use the keep each sphere’s position at 0 on the y-axis, matching my mental model of the spheres being balls sitting on the ground. It would arguably have been more concise to achieve the same visual effect by using y-axis positions instead of translate, but I found this approach felt better.</p>
 
 
@@ -184,18 +217,18 @@ if (host === 'http://aframe.io' || host === 'http://aframevr.github.io') {
         
         
         
-          <span class="float-left"><a href="/blog/shopping/" class="guide-link guide-link-left">← Prototyping a Shopping Example</a></span>
+          <span class="float-left"><a href="/blog/drawvr-minecraft/" class="guide-link guide-link-left">← Creating a Minecraft Scene in WebVR</a></span>
         
         
-          <span class="float-right"><a href="/blog/drawvr-minecraft/" class="guide-link guide-link-right">Creating a Minecraft Scene in WebVR →</a></span>
+          <span class="float-right"><a href="/blog/flickr-textures/" class="guide-link guide-link-right">CC-Licensed Textures from Flickr →</a></span>
         
       </footer>
     
 
     <footer class="footer footnote">
-      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+      <p>Except where otherwise noted, content on this site is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="external">Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
       
-        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/spheres-and-fog.md" class="github-file-link" target="_blank" rel="external">Suggest an edit to this post on GitHub</a></p>
+        <p>Caught a mistake? <br><br> <a href="https://github.com/aframevr/aframe-site/edit/master/src/_posts/spheres-and-fog.md" class="github-file-link" rel="external">Suggest an edit to this post on GitHub</a></p>
       
     </footer>
   </div>
